@@ -5,11 +5,18 @@
 \RequirePackage{ifthen}
 \newboolean{sim-use}
 \newboolean{halfpage}
+\newboolean{blue_items}
 \DeclareOption{sim-use}{\setboolean{sim-use}{true}}
 \DeclareOption{halfpage}{\setboolean{halfpage}{true}}
+\DeclareOption{blue_items}{\setboolean{blue_items}{true}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[twocolumn, 11pt, a4paper]{article}
+
+\ifthenelse{\boolean{halfpage}}{
+    \LoadClass[twocolumn, 11pt, a4paper]{article}
+}{
+    \LoadClass[onecolumn, 11pt, a4paper]{article}
+}
 
 % Define custom macro definitions
 \newcommand{\logo}[1]{\def\@logo{#1}}
@@ -42,7 +49,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\ifthenelse{\boolean{sim-use}}{For simulation use only}{}}
-\fancyfoot[R]{\color{blue}Blue Items: Only necessary for the first or last flight\\of the day or after maintenance action}
+\fancyfoot[R]{\ifthenelse{\boolean{blue_items}}{\color{blue}Blue Items: Only necessary for the first or last flight\\of the day or after maintenance action}{}}
 \fancyhead[C]{%
     % \setlength{\extrarowheight}{0.6in}   % use \rule to specific row height instead
     \newcolumntype{C}{>{\centering\arraybackslash}m}
