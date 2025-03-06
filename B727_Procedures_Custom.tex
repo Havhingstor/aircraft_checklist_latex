@@ -1,0 +1,443 @@
+\documentclass[sim-use]{checklist}
+\usepackage{gensymb}
+\usepackage{textcomp}
+
+\logo{logo_white/boeing.png}
+\title{Normal Procedures}
+\subtitle{Boeing \\ B727(F)}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+ 
+\begin{checklist}{Powerup (Engineer)}
+    \item{Battery}{On, $\ge$ 24V}
+    \condition{APU Fire Test}{
+        \item{APU Fire Test Switch}{Test}
+        \item{Light \& Bell}{Observe}
+        \item{APU Fire Test Switch}{2x Reset}
+    }
+    \condition{APU Start}{
+       \item{AC Meters Selector}{APU}
+       \item{Essential Power Selector}{Not APU}
+       \item{APU Start Switch}{Start Until APU Crank Light Illuminates}
+       \item{Wait for}{APU EGT stabilized}
+       \item{PACKS}{Both Off}
+       \item{APU Generator}{Close}
+       \item{Essential Power Selector}{APU}
+       \item{Essential Power Source Failure Light}{Observe extinguish}
+    }
+    \item{Radio Master Switches}{On}
+    \item{Parking Brake}{Check Set}
+    \item{Galley Power}{One On}
+    \item{Hydraulic Quantities}{Check}
+    \item{Elec Hydraulic Pumps System B}{One On}
+    \item{Oil Quantity Test}{Press, Observe Needles to 0, back after release}
+    \item{Oxygen Pressure}{Check Crew $\ge$ 1200 PSI, Pass $\ge$ 1500 PSI}
+    \condition{Provide Air Supply} {
+        \item{Wait for}{APU Gen On $\ge$ 1 min}
+        \item{All Bleed Switches}{On}
+        \item{Cab Alt Selector}{$\ge$ 500 ft above Airfield Level}
+        \item{Pressurization Switch}{GRD}
+        \item{Cooling Doors}{Open Completely}
+        \item{PACKS}{Both On}
+    }
+\end{checklist}
+
+\begin{checklist}{Safety Checks (Engineer)}
+    \condition{Fuel Dump Panel}{
+        \item{All Fuel Dump Valves}{Closed}
+        \item{Valve in Transit Lights}{Push to Test}
+    }
+\end{checklist}
+
+\begin{continuedchecklist}
+    \condition{Fire Detection Tests}{
+        \item{Engine Fire Detection Loops} {All on A \& B}
+        \item{Fire Test Switch} {On, Observe 3 Engine Fire Handles, Bell, 3 Detector Fault Lights}
+        \item{Bell Cutout}{Press \& Observe}
+        \item{Fire Test Switch}{Off}
+    }
+    \item{Door Lights}{Test}
+    \item{Autopilot Switch} {Guarded Normal}
+    \item{LE Flap Lights}{Light Test \& Observe}
+    \item {Electrical Warning Lights}{Test}
+    \item{Air Conditioning Flow Selector}{As Needed}
+\end{continuedchecklist}
+
+\begin{checklist}{Preflight Checks (Pilots)}
+    \item{Light Test}{TEST, Observe All Bulbs On, AP Disc Warning Sound}
+    \item{Flight Control Switches}{Guarded}
+    \item{FLT Control Warning Test}{Middle Position}
+    \item{Anti Skid}{Off, Not Guarded}
+    \item{Stall Warning Test}{Test, Observe both Stick Shakers}
+    \item{Flight Recorder Test}{Press, Observe Light}
+    \item{Captain Compass}{Slaved}
+    \item{Instrument Comparator Test}{Press, Observe Lights}
+    \item {NAV, Compass, Gyro Switches} {Normal}
+    \item{Cargo Fire Detection} {Test, Observe ARM Lights Illuminate, Bell}
+    \item{Autobrake}{RTO}
+    \item{Wipers}{As Needed / Park}
+    \item{Emergency Exit Lights}{ARM, Guard}
+    \item{Engine Start Switches}{All Guarded}
+    \item {Alternate Flaps} {Guarded}
+    \item {FO Compass}{Slaved}
+    \item {Cockpit Voice Recorder Test}{Press, Observe Needle Moves Up, Down after Release}
+    \item{Passenger Signs}{Both On}
+    \item{Transponder}{Off, Squawk Set / 2000, Correct System for PF}
+    \condition{Window Heat}{
+        \item{Window Heat Switches}{All On}
+        \item{Window Heat Test Switch}{Overheat Test, Observe Overheat Lights}
+        \item{Window Heat Switches}{All Off / Reset, then On again}
+    }
+\end{checklist}
+
+\begin{continuedchecklist}
+    \condition{Anti Ice Control Tests}{
+        \item{Control Selector} {L, Observe Valve Pos Lights Illuminate}
+        \item{Engine Switches}{All Open, Observe Valve Pos Lights Off, then On}
+        \item{Control Selector} {Cowl \& R, Observe Valve Pos Lights Illuminate}
+        \item{Control Selector} {Wing, Observe Wing Valve Pos Lights Illuminate}
+        \item{Control Selector \& Engine Switches}{Off \& Close}
+    }
+    \item{Probe Heat}{Off}
+    \item{Bottle Transfer Switch}{Left Position}
+    \condition{Captain Primary Flight Instruments} {
+        \item {Primary Flight Instruments}{Observe Reasonable Values}
+        \item{ADI}{Test, Observe Warning Flags, 20\% Tilt}
+        \item{Primary Altimeter}{Set QNH, Marker to Field Elevation}
+        \item{Standby Attitude Indicator}{Align}
+        \item {Standby Altimeter}{Set QNH, Marker to Field Elevation}
+        \item {NAV / GPS Switch}{Set as needed}
+    }
+    
+    \item {Engine Indicators}{Observe Reasonable Values}
+    \condition{FO Primary Flight Instruments} {
+        \item {Primary Flight Instruments}{Observe Reasonable Values}
+        \item{ADI}{Test, Observe Warning Flags, 20\% Tilt}
+        \item{Primary Altimeter}{Set QNH, Marker to Field Elevation}
+    }
+    \item {Hydraulic \& Pneumatic Brake Pressure}{Check 3000 PSI}
+    \item{Mach Air Speed Warning}{Set No 1}
+    \item{Air Speed Warning Switch}{Set Mode A}
+    \item{Yaw Damper Test Switch}{Set Upper}
+    \item{Ground Proximity System} {Test, Observe "Glideslope", "Pull Up"}
+    \item{Stab Trim}{Set 0}
+    \item{Parking Brake}{Set}
+    \item{Engine Start Levers}{Cutoff}
+    \item{Stab Trim Light}{Push to Test}
+    \item{Stab Trim Cutout Switches}{Both Normal}
+    \condition{Autopilot Panel}{
+        \item{Pitch Selector}{Vertical Speed}
+        \item{Vertical Speed}{Set 0}
+        \item{Turn Knob}{Set Wings Level}
+        \item{Autopilot}{Disengaged}
+        \item {Nav Selector}{Turn Knob}
+    }
+    \item {Radios}{Set Frequencies}
+    \item{Aileron \& Rudder Trim}{Zero}
+    \item{Audio Panel}{Set as Needed}
+\end{continuedchecklist}
+
+\begin{checklist}{Preflight Checks (Engineer)}
+    \item{Main Cargo Smoke Detectors} {Test, Observe Lights, Bell}
+    \item{Smoke Control}{Normal, Guarded}
+    \item{Wing Anti Ice Auto Trip Off}{Ground Test, Observe Light, Ground Reset, then Normal}
+    \item{Overheat Detection System}{Test, Observe Lights}
+    \item{Start Valve Lights}{Push to Test Bulbs}
+    \item{Aft Cabin Zone Temp}{Test Valve Movement, then Centre}
+    \item{Aft Cabin Zone Temp Overheat Light}{Push to Test Bulb}
+    \item{Pack Trip}{Cutout}
+    \item{Passenger Oxygen System}{Normal, Push to Test Bulb}
+    \condition{Generators} {
+        \item{IDG Disconnect Switches}{Guarded}
+        \item {Drive Temperature Switches}{All In}
+        \item{Essential Power}{Set correct Source}
+        \item{Drive Oil Temps}{Check on Minimum}
+        \item{Generator Circuit Lights}{Push to Test Bulbs}
+        \item{Frequencies Selectors}{In Middle Position}
+        \item{AC Meters Selector}{Set correct Source}
+    }
+    \condition{Fuel Systems} {
+        \item{Fuel Pumps}{One Pump per Tank on,\\Observe Extinguished Low Pressure Lights Where Pumps are on}
+        \item{Fuel Quantity}{Check \& Compare}
+        \item{Fuel Quantity Indicators}{Test, Observe Needle to 0, Back after Release}
+        \item{Fuel Crossfeed Valves}{Close For Wing Tanks,\\Observe Lights Illuminate, then Extinguish}
+        \item{Fuel Shutoff Valves}{All Open}
+        \item{Valve in Transit Lights}{Push to Test All Bulbs}
+    }
+    \item{Hydraulic Brake Interconnect} {Push to Test Bulb, Switch Closed \& Guarded}
+    \item{Fuel Heat Lights}{Push to Test Bulbs}
+    \item{Fuel Heat System} {As Needed}
+\end{checklist}
+
+\begin{continuedchecklist}
+    \condition{Hydraulic System} {
+        \item{Engine Pump Low Pressure Lights} {Check Illuminated}
+        \item{Engine Pumps}{Check On}
+        \item{System A Overheat Light} {Push to Test Bulb}
+        \item{Ground Interconnect}{Closed}
+        \item{Fluid Shutoff Valves}{Both Open \& Guarded}
+        \item{Electric Hydraulic Pumps} {Both On, Observe Low Pressure Lights Extinguish}
+        \item{Electric Hydraulic Pumps} {One Off}
+        \item{System B Lights} {Push to Test Bulbs}
+        \item{Standby System Lights} {Push to Test Bulbs}
+    }
+    \item{Oil Cooler}{Normal}
+    \item{Service Interphone}{Off}
+    \item{Warning Lights}{Push to Test Bulbs}
+    \item{Engine Vibration Meters}{Test, Observe Meters Rise to 3.5 - 4.5, Return after Release}
+    \item{Engine Vibration Meter Switches}{Set to lower Positions}
+    \condition{Cabin Pressurization System} {
+        \item{Flt Alt, Land Alt} {Set}
+        \item{Cab Alt}{Set according to Chart}
+        \item{Cabin Rate}{At ca. 11 O'Clock}
+        \item{Outflow Valve Manual Switch} {Centre Position}
+        \item{Mode Selectors}{GRD \& Auto}
+        \item{Status Lights}{Press to Test Bulbs}
+    }
+    \item{Diff Pressure \& Pressure Climb}{Check 0}
+    \item{Cabin Altitude}{Check current Altitude}
+    \item{Temperature Gauge Selector}{Set as Needed}
+    \item{Temperature Gauge}{Check Reasonable}
+    \item{Temperature Knobs}{Set as Needed}
+    \item{Duct Overheat Lights} {Push to Test Bulbs}
+    \condition{Bleed Air System} {
+        \item{Bleeds \& Packs} {All Open \& On}
+        \item{Cooling Doors}{Both completely Open}
+        \item{Cargo Heat Outflow}{Normal}
+        \item{Gasper Fan}{On}
+        \item{Lights} {Push to Test Bulbs}
+    }
+\end{continuedchecklist}
+
+\begin{checklist} {Flight Preparation }
+    \item{Navigation} {Configure}
+    \item{Takeoff Performance} {Calculate}
+\end{checklist}
+
+\begin{checklist}{Engine Start}
+    \item{Doors \& Hatches}{Check All Closed}
+    \item{Ground Equipment} {Removed}
+    \item{Transponder}{On}
+    \item{Beacon Light}{On}
+    \item{Packs}{Off}
+    \item {Bleeds}{All On}
+    \item{Wing Anti Ice} {Off}
+    \item{Before Start Checklist} {Perform (As best as possible)}
+    \item{Pushback}{Start}
+    \item{Engine Start}{Monitor, Abort Manually If Necessary }
+    \condition{Start Engine 3} {
+        \item{Engine Start Switch}{Ground}
+        \item{N2, Oil Pressure \& N1}{Observe Increase}
+        \item{Wait for}{20\% N2}
+        \item{Fuel Lever}{Idle}
+        \item{Wait for}{40\% N2}
+        \item{Engine Start Switch}{Observe Cutout}
+        \item{IDG Low Pressure Light}{Check Off}
+        \item{Gen Drive Oil Temp}{Observe Rise}
+    }
+    \item{Wait for}{Equipment Removed}
+    \item{Engine 1}{Start}
+    \item{Engine 2}{Start}
+\end{checklist}
+
+\begin{checklist}{After Start}
+    \item{AC Meters Selector}{Select Gen 3}
+    \item{Generators}{Sync by changing Freq Until no flashing Lights}
+    \item{Generator Circuits}{All Close}
+    \item{Essential Power Selector}{Select Gen 3}
+    \item{Fuel Pumps} {All On}
+\end{checklist}
+
+\begin{continuedchecklist}
+    \item{Hydraulic Pumps}{All On}
+    \item{APU}{Off}
+    \item{Packs}{On}
+    \item{Engine 3 \& APU Bleed} {Off}
+    \item{Pack Trip}{Normal}
+    \item{Engine Anti Ice}{As Needed}
+    \item{Probe Heat}{On}
+    \item{Flaps}{2}
+    \item{Wait for}{LE Flaps Transit Complete (Green Light)}
+    \item{Flaps}{Extend for Takeoff}
+    \item{Trim}{Set For Takeoff}
+    \item{Flight Controls}{Check, slow and deliberate Movements,\\Hold Tiller in Center for Rudder Test}
+    \item{Pressurization Mode Selector}{FLT}
+    \item{After Start Checklist}{Perform}
+\end{continuedchecklist}
+
+\begin{checklist}{Taxi}
+    \item{Taxi \& Turnoff Lights}{On}
+    \item{Takeoff \& SID Data}{Review}
+    \item{Taxi Checklist} {Perform (As best as possible)}
+    \item{Pressurization Mode Selector}{Check FLT}
+\end{checklist}
+
+\begin{checklist}{Lineup}
+    \condition{If Runway wet, snow or slush} {
+        \item{Cooling Doors}{Close}
+    }
+    \item{Automatic Pack Trip}{Check Normal}
+    \item{Pressurization Mode Selector}{Check FLT}
+    \item{Anti Skid}{Arm}
+    \item{Landing \& Strobe Lights}{On}
+    \item{Transponder}{TA/RA}
+    \condition{Slush or Heavy Precipitation}{
+        \item{Continuous Ignition }{On}
+    }
+    \item{Before Takeoff Checklist}{Perform}
+\end{checklist}
+
+\begin{checklist}{Takeoff}
+    \item{Engines Stabilized}{EPR 1.4}
+    \item{Initial Pitch}{As calculated}
+    \item{Inital Climb Speed}{V2 - V2+10}
+    \item{Accel. Height} {1000 ft AFE}
+    \item{Thrust Reduction}{Flaps 5 / Up}
+    \item{Autopilot Min Height}{1100 ft AFE}
+    \item {Generic After Takeoff Flows} {Perform}
+    \condition{At 800 ft AFE or above} {
+        \item{Auto Pack Trip}{Cutout}
+    }
+\end{checklist}
+
+\begin{checklist}{Climb}
+    \condition{At 10,000 ft} {
+        \item{Generic 10,000 ft Flows} {Perform}
+        \item{Cooling Doors}{Close 1/2}
+        \item{After Takeoff Checklist} {Perform}
+    }
+    \condition {At 18,000 ft} {
+        \item{Cooling Doors} {Close 3/4}
+    }
+    \condition{At 20,000 ft} {
+        \item{Potentially Reduce Speed}{290 kts}
+    }
+    \condition{Every 5,000 ft} {
+        \item{Maximum Thrust} {Review \& Apply}
+    }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+    \item{Periodically}{enter new waypoints, Don't change previous waypoint}
+    \item{Back Up INS Nav}{Use Enroute VORs}
+    \condition{Set Cruise Thrust} {
+        \item{Thrust} {Set Reduced}
+        \item{Desired Mach Number} {Capture}
+        \item{Thrust Levers}{Limit To Small Movement}
+    }
+    \item{Fuel Checks}{Perform Periodically}
+\end{checklist}
+
+\begin{continuedchecklist}
+    \condition{Manage Fuel Temperature} {
+        \item{Fuel Temp $<$ 0\degree\ C AND (Icing Light OR Descend)} {Fuel Heat Necessary}
+        \item{To Heat Fuel}{Turn Fuel Heat On For 1 Minute}
+        \item{After Transit Valve Light extinguishes}{Test Functionality}
+    }
+    \condition{Manage PACK Heat} {
+        \item{Cooling Doors}{Close Completely}
+        \item{PACK Temp}{Ensure $<$ 45\degree\ C}
+    }
+\end{continuedchecklist}
+
+\begin{checklist}{Descent Planning \& Descent}
+        \item {TOD} {Calculate Backwards From "Below" Restriction Or Airport}
+        \item{Distance from TOD}{Alt Diff in ft * 3 nm}
+        \item{Arrival \& Approach Frequencies}{Tune}
+        \item{Desired Altitudes in Descent}{Note \& Check}
+        \item{V/S in Descent}{GS * 5 fpm}
+        \condition{Landing Performance Calculations} {
+            \item{Gross Weight (Current)}{Calculate}
+            \item{Approach Speed}{Look Up In Table For Next Higher GW}
+            \item{Min. Man. Speeds}{Look Up In Table}
+            \item{GA EPR}{Look Up In Table}
+            \item{Speed \& EPR Bugs}{Set Accordingly}
+            \item{Autobrake} {Set}
+        }
+        \condition{Descent Speeds} {
+            \item{Before Conversion}{Cruise Mach}
+            \item{Above 10000 ft}{300 kts}
+            \item{Below 10000 ft}{250 kts}
+            \item{Intermediate Approach}{200 kts}
+        }
+        \item{At 10000 ft}{All Lights On}
+        \condition{Below Transition Altitude} {
+            \item{Approach Checklist}{Perform}
+        }
+\end{checklist}
+
+\begin{checklist} {Landing}
+    \item{If ILS is flown manually} {Configure Early}
+    \item{To Arm Localizer} {AP Mode NAV/LOC}
+    \item{To Arm Glideslope} {AP Mode AUTO GS}
+\end{checklist}
+
+\begin{continuedchecklist}
+    \condition{If Modes don't arm correctly} {
+        \item {Delay Mode Activation} {Until LOC or GS active}
+    }
+    \item{Start Configuring}{Ca. 11 NM DME}
+    \item{Delay Flaps $>$ 2} {Until LE Flaps Extended}
+    \item{Gear Down \& Flaps 15} {After Glideslope Capture}
+    \condition{Slush or Heavy Precipitation} {
+        \item{Continuous Ignition }{On}
+    }
+    \item{Autobrake} {Check Set}
+    \item{Before AP Disconnect} {Find Final Thrust Setting, Roughly 3500 lb / h}
+    \item{Cross Threshold}{At 50 ft}
+    \item{At 20 ft} {Flare, Idle Thrust}
+    \item{At Touchdown} {Deploy Speedbrakes \& Reversers}
+    \item{At 70 kt}{Stow Reversers}
+\end{continuedchecklist}
+
+\begin{checklist}{After Landing}
+	\item{Anti Skid} {Off}
+	\item{Auto Brakes} {Check Disarm}
+	\item{Transponder}{On}
+	\item{Probe Heat}{Off}
+	\item{Anti Ice}{As needed}
+	\item{Landing \& Strobe Lights}{Off}
+	\item{Flaps \& Speedbrake}{Retract}
+	\item{Weather Radar}{Off (If installed)}
+	\item{Essential Power \& Synchronizer}{Not Gen 3 (due to Early Shutdown of Engine 3)}
+    \item{APU Start Switch}{Start Until APU Crank Light Illuminates}
+    \item{Pressurization Panel}{GRD Mode}
+    \item{Right PACK}{Off}
+    \item{Gasper Fan}{Off}
+    \item{Hyd Brake Interconnect}{Open}
+    \item{Crossfeed}{As necessary}
+    \item{Boost Pumps}{Only necessary, One Pump per Tank}
+    \item{One Minute After Idle}{Shutdown Engine 3}
+    \condition{APU Running $\ge$ 1 min} {
+		\item{Eng 2 \& APU Bleed} {On}
+		\item{Hyd B Elec Pumps} {Turn one off}
+    }
+	\condition{Approaching Gate} {
+		\item{Taxi \& Turnoff Lights}{Off}
+	}
+\end{checklist}
+
+\begin{checklist}{Shutdown \& Secure}
+	\item{Parking Brake}{Set}
+    \item{Hyd Brake Interconnect}{Close}
+    \item{To Switch to External Power}{Connect GPU, wait for Stable Power}
+    \item{Essential Power}{Switch to External Power or APU}
+    \item{Remaining Engines}{Shut Down}
+    \item{Internal \& External Lights}{Turn Off to reduce Electric Load}
+    \item{DC Meter}{Essential TR}
+    \item{Remaining PACK}{Off}
+	\condition{Power On GPU} {
+		\item{APU} {Shut Off}
+		\item{Eng 2 \& APU Bleed} {On}
+	}
+	\item{Radio Master Switches}{Turn off}
+	\item{Remaining Fuel Pumps}{Turn Off}
+	\item{Crossfeed Valves}{Open \& Check Valve Lights}
+	\item{Engine Driven Hyd Pump} {Turn Off}
+	\item{System B Hyd Pump} {Turn Off}
+	\item{Secure Cockpit \& Flight Termination Checklist}{Perform}
+\end{checklist}
+
+\end{document}
