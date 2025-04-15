@@ -49,7 +49,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\ifthenelse{\boolean{sim-use}}{For simulation use only}{}}
-\fancyfoot[R]{\ifthenelse{\boolean{blue_items}}{\color{blue}Blue Items: Only necessary for the first or last flight\\of the day or after maintenance action}{}}
+\fancyfoot[R]{\ifthenelse{\boolean{blue_items}}{\color{blue}Blue items: Not required on through flights}{}}
 \fancyhead[C]{%
     % \setlength{\extrarowheight}{0.6in}   % use \rule to specific row height instead
     \newcolumntype{C}{>{\centering\arraybackslash}m}
