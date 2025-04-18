@@ -8,150 +8,156 @@
 \version{Version: 1.0 \\ \today}
 %\makeatletter
 
+\registerAssigneeLength{all}
+\registerAssigneeLength{c}
+\registerAssigneeLength{f/o}
+\registerAssigneeLength{f/e}
+\registerAssigneeLength{c,f/o}
+
 \begin{document}
 
 \begin{checklist}{Before Start}
-	\item{Cockpit Preparation Procedures}{Complete}
-	\item{Oxygen Mask \& Quantity}{Checked}
-	\item{Flight Control Power Switches}{On}
-	\item{Body Gear Steering}{Arm}
-	\item{INS Mode}{Nav}
-	\item{Emergency Lights}{Armed}
-	\item{Cabin Signs}{On}
-	\item{Stall Warnings}{Normal}
-	\item{Probe Heat}{On}
-	\item{Window Heat}{On}
-	\item{Radios, Clocks \& Altimeters}{Set}
-	\item{Airspeed}{Bugs Set}
-	\item{EPR}{Bugs Set}
-	\item{Brake Pressure}{Pump On \& Checked}
+	\item{Cockpit Preparation\\Procedures}{Complete}[ALL]
+	\item{Oxygen Mask \& Quantity}{Checked}[ALL]
+	\item{Flight Control Power Switches}{On}[C]
+	\item{Body Gear Steering}{Arm}[C]
+	\item{INS Mode}{Nav}[C]
+	\item{Emergency Lights}{Armed}[C]
+	\item{Cabin Signs}{On}[C]
+	\item{Stall Warnings}{Normal}[f/o]
+	\item{Probe Heat}{On}[f/o]
+	\item{Window Heat}{On}[f/o]
+	\item{Radios, Clocks \& Altimeters}{Set}[all]
+	\item{Airspeed}{Bugs Set}[all]
+	\item{EPR}{Bugs Set}[all]
+	\item{Brake Pressure}{Pump On \& Checked}[f/e]
 	\condition{For Pushback only} {
-		\item{No. 1 Air Pump}{Auto}
+		\item{No. 1 Air Pump}{Auto}[f/e]
 	}
-	\item{Parking Brakes}{Set}
-	\item{Start Levers}{Cutoff}
-	\item{Gear Pins}{Removed}
-	\item{Galley Power}{Off}
-	\item{Fuel}{\blank KGS, Set For Start}
-	\item{Pressurization}{Auto}
-	\item{Pack Valves}{One Open}
-	\item{Air Pumps}{As Required}
-	\item{Start Pressure}{\blank PSI}
-	\item{Cargo Doors}{All Closed}
-	\item{Before Start Checklist}{Complete}
+	\item{Parking Brakes}{Set}[c]
+	\item{Start Levers}{Cutoff}[c]
+	\item{Gear Pins}{Removed}[c]
+	\item{Galley Power}{Off}[f/e]
+	\item{Fuel}{\blank KGS, Set For Start}[f/e]
+	\item{Pressurization}{Auto}[f/e]
+	\item{Pack Valves}{One Open}[f/e]
+	\item{Air Pumps}{As Required}[f/e]
+	\item{Start Pressure}{\blank PSI}[f/e]
+	\item{Cargo Doors}{All Closed}[f/e]
+	\item{Before Start Checklist}{Complete}[f/o]
 \end{checklist}
 
 \begin{checklist}{After Start}
-	\item{Aileron \& Rudder Trim}{Zero}
-	\item{Electrical}{No Lights, Essential Normal}
-	\item{Hydraulics}{Auto \& Normal}
-	\item{Doors}{Closed}
-	\item{Flight Recorder}{On}
-	\item{Ground Equipment}{Cleared}
+	\item{Aileron \& Rudder Trim}{Zero}[F/o]
+	\item{Electrical}{No Lights,\\Essential Normal}[F/E]
+	\item{Hydraulics}{Auto \& Normal}[f/e]
+	\item{Doors}{Closed}[f/e]
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{After Start Checklist}{Complete}
+	\item{Flight Recorder}{On}[f/e]
+	\item{Ground Equipment}{Cleared}[c]
+	\item{After Start Checklist}{Complete}[f/o]
 \end{continuedchecklist}
 
 \begin{checklist}{Before Takeoff}
-	\item{Auto Brake Takeoff}{As Desired}
-	\item{Nacelle Anti-Ice}{As Required}
-	\item{Flight \& Nav Instruments}{Aligned, No Flags}
-	\item{Flaps}{\blank, \blank Green Light}
-	\item{Flight Controls}{Checked}
-	\item{Stabilizer Trim}{\blank Units, Switch Set,\\Light Extinguished}
-	\item{Galley Power}{On}
-	\item{APU}{As Required}
-	\item{Fuel}{Set For Takeoff}
-	\item{Air Conditioning \& Pressurization}{Set \& Auto}
-	\item{Annunciator Lights}{Checked}
+	\item{Auto Brake Takeoff}{As Desired}[c]
+	\item{Nacelle Anti-Ice}{As Required}[f/o]
+	\item{Flight \& Nav\\Instruments}{Aligned, No Flags}[c,f/o]
+	\item{Flaps}{\blank, \blank Green Light}[c]
+	\item{Flight Controls}{Checked}[f/o]
+	\item{Stabilizer Trim}{\blank Units, Switch Set,\\Light Extinguished}[f/o]
+	\item{Galley Power}{On}[f/e]
+	\item{APU}{As Required}[f/e]
+	\item{Fuel}{Set For Takeoff}[f/e]
+	\item{Air Conditioning \&\\Pressurization}{Set \& Auto}[f/e]
+	\item{Annunciator Lights}{Checked}[f/e]
 	\line
-	\item{Transponder}{On}
-	\item{Ignition}{As Required}
-	\item{Inboard Landing Lights and Strobes}{On}
-	\item{Body Gear Steering}{Disarm}
-	\item{Before Takeoff Checklist}{Complete}
+	\item{Transponder}{On}[f/o]
+	\item{Ignition}{As Required}[f/e]
+	\item{Inboard Landing Lights and Strobes}{On}[c]
+	\item{Body Gear Steering}{Disarm}[c]
+	\item{Before Takeoff Checklist}{Complete}[f/e]
 \end{checklist}
 
 \begin{checklist}{After Takeoff}
-	\item{Ignition}{As Required}
-	\item{Cabin Signs}{As Required}
-	\item{Outboard Landing Lights}{Off}
-	\item{Landing Gear}{Up, No Lights \& Off}
-	\item{Flaps}{Up \& No Lights}
-	\item{Cargo Door\\Annunciator Lights}{Extinguished}
-	\condition{If APU is used on takeoff} {
-		\item{APU Bleed Air Switch}{Close}
-		\item{APU}{Shutdown}
-		\item{Isolation Valves}{Both Open}
-	}
+	\item{Ignition}{As Required}[f/e]
+	\item{Cabin Signs}{As Required}[f/e]
+	\item{Outboard Landing Lights}{Off}[f/e]
+	\item{Landing Gear}{Up, No Lights \& Off}[f/e]
+	\item{Flaps}{Up \& No Lights}[f/e]
+	\item{Cargo Door\\Annunciator Lights}{Extinguished}[f/e]
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{After Takeoff Checklist}{Complete}
+	\condition{If APU is used on takeoff} {
+		\item{APU Bleed Air Switch}{Close}[f/e]
+		\item{APU}{Shutdown}[f/e]
+		\item{Isolation Valves}{Both Open}[f/e]
+	}
+	\item{After Takeoff Checklist}{Complete}[f/e]
 \end{continuedchecklist}
 
 \begin{checklist}{Descent - Approach}
-	\item{Pressurization}{Set}
-	\item{Landing Data}{Bugs Set}
-	\item{Fuel}{Set For Landing}
-	\item{Annunciator Lights}{Checked}
-	\item{Altimeters}{Set \& X-Checked}
-	\item{Inboard Landing Lights}{On}
-	\item{Radio \& Nav Instruments}{Set \& X-Checked}
-	\item{Radio Altimeters}{Set}
-	\item{Descent-Approach Checklist}{Complete}
+	\item{Pressurization}{Set}[f/e]
+	\item{Landing Data}{Bugs Set}[all]
+	\item{Fuel}{Set For Landing}[f/e]
+	\item{Annunciator Lights}{Checked}[f/e]
+	\item{Altimeters}{Set \& X-Checked}[all]
+	\item{Inboard Landing Lights}{On}[c]
+	\item{Radio \& Nav\\Instruments}{Set \& X-Checked}[c,f/o]
+	\item{Radio Altimeters}{Set}[c,f/o]
+	\item{Descent-Approach\\Checklist}{Complete}[f/e]
 \end{checklist}
 
 \begin{checklist}{Landing}
-	\item{Auto Brakes}{As Desired}
-	\item{Ignition}{Flight Start}
-	\item{Cabin Signs}{On}
-	\item{Landing Gear}{Down, In, Green Light}
-	\item{Speed Brakes}{Armed}
-	\item{Flaps}{\blank \blank Green Light}
-	\item{Hydraulics}{Normal}
-	\item{Landing Checklist}{Complete}
+	\item{Auto Brakes}{As Desired}[c]
+	\item{Ignition}{Flight Start}[f/e]
+	\item{Cabin Signs}{On}[f/o]
+	\item{Landing Gear}{Down, In,\\Green Light}[c]
+	\item{Speed Brakes}{Armed}[c]
+	\item{Flaps}{\blank \blank Green Light}[c]
+	\item{Hydraulics}{Normal}[f/e]
+	\item{Landing Checklist}{Complete}[f/e]
 \end{checklist}
 
 \begin{checklist}{After Landing}
-	\item{Outflow Valves}{Open}
-	\item{Galley Power}{Off}
-	\item{Electrical}{On APU}
-	\item{Ignition}{Off}
-	\item{Body Gear Steering}{Arm}
-	\item{DME (as installed)}{STBY}
-	\item{Speed Brakes}{Down, Detent}
-	\item{Flaps}{Up, No Lights}
+	\item{Outflow Valves}{Open}[f/e]
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{Transponder}{STBY}
-	\item{Radar}{STBY/Off}
-	\item{After Landing Checklist}{Complete}
+	\item{Galley Power}{Off}[f/e]
+	\item{Electrical}{On APU}[f/e]
+	\item{Ignition}{Off}[f/e]
+	\item{Body Gear Steering}{Arm}[f/e]
+	\item{DME (as installed)}{STBY}[f/e]
+	\item{Speed Brakes}{Down, Detent}[f/e]
+	\item{Flaps}{Up, No Lights}[f/e]
+	\item{Transponder}{STBY}[f/e]
+	\item{Radar}{STBY/Off}[f/e]
+	\item{After Landing Checklist}{Complete}[f/e]
 \end{continuedchecklist}
 
 \begin{checklist}{Shutdown}
-	\item{Start Levers}{Cutoff}
-	\item{Seat Belt}{Off}
-	\item{Probe Heat}{Off}
-	\item{Window Heat}{Off}
-	\item{Exterior Lights}{As Required}
-	\item{Parking Brakes}{As Required}
-	\item{Air Conditioning}{As Required}
-	\item{Air Pumps}{Off}
-	\item{Fuel Boost Pumps}{Off}
-	\item{Reserve Fuel Transfer Switches}{Closed}
-	\item{Flight Recorder}{Off}
-	\item{Oxygen Regulators}{100\%, Off}
-	\specialitem{INS Mode}{Off}
-	\specialitem{Emergency Lights}{Off}
-	\specialitem{Oxygen Valve}{Closed}
-	\specialitem{APU}{Off}
-	\specialitem{Standby Power}{Off}
-	\specialitem{Battery}{Off}
-	\item{Shutdown Checklist}{Complete}
+	\item{Start Levers}{Cutoff}[c]
+	\item{Seat Belt}{Off}[c]
+	\item{Probe Heat}{Off}[f/o]
+	\item{Window Heat}{Off}[f/o]
+	\item{Exterior Lights}{As Required}[f/o]
+	\item{Parking Brakes}{As Required}[c]
+	\item{Air Conditioning}{As Required}[f/e]
+	\item{Air Pumps}{Off}[f/e]
+	\item{Fuel Boost Pumps}{Off}[f/e]
+	\item{Reserve Fuel\\Transfer Switches}{Closed}[f/e]
+	\item{Flight Recorder}{Off}[f/e]
+	\item{Oxygen Regulators}{100\%, Off}[all]
+	\specialitem{INS Mode}{Off}[c]
+	\specialitem{Emergency Lights}{Off}[c]
+	\specialitem{Oxygen Valve}{Closed}[f/e]
+	\specialitem{APU}{Off}[f/e]
+	\specialitem{Standby Power}{Off}[f/e]
+	\specialitem{Battery}{Off}[f/e]
+	\item{Shutdown Checklist}{Complete}[f/o]
 \end{checklist}
 
 \end{document}

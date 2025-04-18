@@ -29,6 +29,19 @@
 \RequirePackage{xcolor}
 \RequirePackage{ragged2e}
 
+\newlength{\maxAssigneeLength}
+\newlength{\newAssigneeLength}
+\newboolean{assignee}
+
+\newcommand{\registerAssigneeLength}[1]{
+	\setboolean{assignee}{true}
+	\settowidth{\newAssigneeLength}{\uppercase{#1}}
+	
+	\ifthenelse{\lengthtest{\maxAssigneeLength < \newAssigneeLength}}{
+		\setlength{\maxAssigneeLength}{\newAssigneeLength}
+	}{}
+}
+
 \definecolor{customblack}{gray}{0.15}
 \newcommand{\blank}{\underline{\hspace{5mm}}}    % underlined empty space
 
@@ -102,28 +115,30 @@
     
 \newenvironment{_checklist_internal}{%
     \newcommand{\indentinternal}{\hspace{0em}}
+    \newcommand{\spacednewline}{\phantom{\ifthenelse{\boolean{assignee}}{ - \hspace{\maxAssigneeLength}}{}}\newline}
+    \renewcommand{\\}{\spacednewline}
     \setboolean{customcasing}{false}
     \setboolean{specialitem}{false}
     \newcommand{\casinginternal}[1]{\ifthenelse{\boolean{customcasing}}{##1}{\uppercase{##1}}}
     \newcommand{\specialinternal}{\ifthenelse{\boolean{specialitem}}{\color{blue}}{}}
     
-    \renewcommand{\item}[2]{%
-        {\specialinternal \indentinternal \RaggedRight ##1\,\dotfill\,\RaggedLeft \casinginternal{##2} \newline}
+    \RenewDocumentCommand{\item}{mmO{}}{%
+        {\specialinternal \indentinternal \RaggedRight ##1\,\dotfill\,\RaggedLeft \casinginternal{##2}\ifthenelse{\boolean{assignee}}{ - \makebox[\maxAssigneeLength][r]{\uppercase{##3}}}{} \newline}
     }
-    \newcommand{\itemcustcase}[2]{%
+    \NewDocumentCommand{\itemcustcase}{mmO{}}{%
         \setbool{customcasing}{true}
-        \item{##1}{##2}
+        \item{##1}{##2}[##3]
         \setbool{customcasing}{false}
     }
-    \newcommand{\specialitem}[2]{%
+    \NewDocumentCommand{\specialitem}{mmO{}}{%
         \setbool{specialitem}{true}
-        \item{##1}{##2}
+        \item{##1}{##2}[##3]
         \setbool{specialitem}{false}
     }
-    \newcommand{\specialitemcustcase}[2]{%
+    \NewDocumentCommand{\specialitemcustcase}{mmO{}}{%
         \setbool{customcasing}{true}
         \setbool{specialitem}{true}
-        \item{##1}{##2}
+        \item{##1}{##2}[##3]
         \setbool{specialitem}{false}
         \setbool{customcasing}{false}
     }
@@ -131,9 +146,9 @@
 
     \newcommand{\condition}[2]{%
         \renewcommand{\indentinternal}{\hspace{1.5em}}
-        \renewcommand{\\}{\newline\indentinternal}
+        \renewcommand{\\}{\spacednewline\indentinternal}
         \RaggedRight \textit{##1} \newline ##2
-        \renewcommand{\\}{\newline}
+        \renewcommand{\\}{\spacednewline}
         \renewcommand{\indentinternal}{\hspace{0em}}
     }
 }{}
