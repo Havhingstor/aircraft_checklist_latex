@@ -120,7 +120,7 @@
     \setboolean{customcasing}{false}
     \setboolean{specialitem}{false}
     \newcommand{\casinginternal}[1]{\ifthenelse{\boolean{customcasing}}{##1}{\uppercase{##1}}}
-    \newcommand{\specialinternal}{\ifthenelse{\boolean{specialitem}}{\color{blue}}{}}
+    \newcommand{\specialinternal}{\ifthenelse{\boolean{specialitem} \AND \boolean{blue_items}}{\color{blue}}{}}
     
     \RenewDocumentCommand{\item}{mmO{}}{%
         {\specialinternal \indentinternal \RaggedRight ##1\,\dotfill\,\RaggedLeft \casinginternal{##2}\ifthenelse{\boolean{assignee}}{ - \makebox[\maxAssigneeLength][r]{\uppercase{##3}}}{} \newline}
@@ -147,8 +147,16 @@
     \newcommand{\condition}[2]{%
         \renewcommand{\indentinternal}{\hspace{1.5em}}
         \renewcommand{\\}{\spacednewline\indentinternal}
-        \RaggedRight \textit{##1} \newline ##2
+        \RaggedRight {\specialinternal \textit{##1}} \newline ##2
         \renewcommand{\\}{\spacednewline}
         \renewcommand{\indentinternal}{\hspace{0em}}
     }
+    
+    \newcommand{\specialcondition}[2]{
+        \setbool{specialitem}{true}
+        \condition{##1}{##2}
+        \setbool{specialitem}{false}
+    }
+    
+    \newcommand{\note}[1]{\Centering \textit{##1} \spacednewline}
 }{}
