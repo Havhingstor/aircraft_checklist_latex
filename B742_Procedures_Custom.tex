@@ -99,22 +99,22 @@
 		\item{Window Heat Switches}{Off}
 	}
 	\specialitem{Navigation Light Switch}{On}
-	\item{Annunciator Lights}{Check} % Check!
+	\item{Annunciator Lights}{Check}
 	\item{Engine Instruments}{Normal, Check Power Failure Flags hidden,\\maximum indication pointers at correct setting}
 	\specialitem{Total and Static Air Temperatures}{Check Failure Flags hidden,\\temperatures comparable}
 	\specialitem{Takeoff Warning Horn}{Check}
 	\specialitem{EPRL System}{Check warning flags out of view}
 	\specialitem{EPRL System Test}{Perform in all Modes, check Response on Centre Panel}
-	\specialitem{Oxygen Emergency Levers}{Check Off at all Stations} %Really?
+	\specialitem{Oxygen Emergency Levers}{Check Off at all Stations}
 	\specialitem{Crew Oxygen Control Valve}{Check Open, Pressure in Green Band}
 	\note{F/E'S STATION}
-	\item{F/E Panel Indicator Lights}{Test}
+	\item{F/E Panel Indicator Lights}{Test} % really?
 	\specialitem{Galley/Lavatory Exhaust Fan}{Set Auto}
 	\item{Galley Power Bus Switches}{On, Check Trip Off Lights Exting. \& Load Limits not exceeded}
-	\item{Crew and Passenger Oxygen}{Check Pressure Adequate} %Crew??
+	\item{Passenger Oxygen}{Check Pressure Adequate}
 	\item{Passenger Oxygen Switch}{Check Norm \& guarded, on Light extinguished}
 	\condition{AC Electrical System Checks} {
-		\item{GEN OPEN \& CSD OIL Lights}{Check Illuminated} %CSD Oil Press?
+		\item{GEN OPEN \& PRESS Lights}{Check Illuminated}
 		\item{KW Load Meters}{Check Indicating Zero}
 		\item{FIELD OFF \& GEN BRG FAILURE Lights}{Check Extinguished}
 		\item{CSD Disconnect Switches}{Check Guards Down}
@@ -136,7 +136,7 @@
 		\item{Fuel Heat Switches}{Check in CLOSED/OFF, Check ICING \& Heater Lights extinguished}
 		\item{Scavenge Pump Switch}{On if Fuel in centre tank,\\Check LOW Pressure Lights extinguish, Off}
 		\item{Fuel Pressure Indicators}{Check Zero}
-		\item{ENG Fuel Temperature Indicators}{Press for each Engine, check On Light \& Temperature} %Reset Fuel Used?
+		\item{ENG Fuel Temperature Indicators}{Press for each Engine, check On Light \& Temperature}
 	}
 	\condition{Cabin Altitude Control Module Checks} {
 		\item{Pressurization Rate Selector}{Set to Index}
@@ -185,7 +185,7 @@
 		\item{HYD QTY indicators}{Check in green Band}
 		\item{Hydraulic LOW QTY, OVERHEAT Lights}{Check Extinguished}
 		\item{System Temperatures}{Check All Roughly the Same}
-		\item{Engine Driven Pump Switches}{Check Normal, Hydraulic LOW PRESS Light illum.}
+		\item{Engine Driven Pump Switches}{Check Normal, PRESS Lights illum.}
 	}
 	\specialitem{Engine Vibration Indicators}{Check Zero}
 	\specialitem{Total Air Temperature Indicator}{Check Off Flag hidden, comparable to Pilots' indicator}
@@ -219,7 +219,7 @@
 \begin{checklist}{Cockpit Preparation - C \& F/O}
 	\specialitem{Life Vest \& Smoke Googles}{Stowed}
 	\item{Oxygen}{Checked, On, 100\%}
-	\specialitem{Static Source Selectors}{Normal} %Where?
+	\specialitem{Static Source Selectors}{Normal}
 	\specialitem{Flight Control Power Switches}{On, Valve Closed lights extinguished}
 	\item{Auto Brake Arm Switch}{Off}
 	\specialitem{Yaw Damper Switches}{Engaged}
@@ -258,16 +258,10 @@
 		\item{Navigation Mode Switch}{HDG}
 		\item{Speed \& Altitude Mode Switches}{Off, check Altitude Sel \& Hold Lights exting.}
 	}
-	\specialcondition{ILS/Autoland Ground Test\\Has to be performed if CAT III landing is anticipated} { %Change to usual
-		\item{Radio Altimeter}{Indicate Zero}
-		\item{Nav Frequency}{Invalid ILS Frequency Set}
-		\item{Glideslope \& Localizer Flags}{In view}
-		\item{All Autopilots}{Off}
-		\item{Navigation Mode Switch}{LAND}
-		\item{Captain's ILS Test Switch}{UP/LT}
-		\item{Blue Test Annunciators}{Check CAP \& F/O}
-		\item{1/2 A/P B Warning Light}{Check Amber, red means Test is failed}
-		\item{Navigation Mode Switch}{Cycle to Heading and back, check A/P Lights exting.}
+	\specialcondition{ILS Test} {
+		\item{NAV Radio}{Tune any ILS Frequency, like 109.15}
+		\item{UP/LT VOR Test}{Perform, Notice Needles Moving Up \& Left}
+		\item{DN/RT VOR Test}{Perform, Notice Needles Moving Down \& Right}
 	}
 	\specialitem{Central Instrument Warning System}{Perform Test, Check all lights \& sounds,\\after release check everything except instrument warn lights exting.}
 	\specialitem{Central Instrument Warning Light}{Press, Check all lights extinguished}
@@ -304,6 +298,7 @@
 	\specialitem{Landing Gear Lever}{Check Down \& In, Only Gear Down Light Illum.}
 	\item{INS System}{Insert Waypoints, Check Automatic Leg Switching, Check total Distance\\Check Status (Ready Light Exting.) \& Place Mode Selector to NAV}
 	\item{INS Position Update \& Triple Mix System}{Initialize / Activate as Desired}
+	\item{Takeoff Data}{Calculate V-Speeds, Stab Trim \& Green Band Settings,\\Rotation Target Attitude, EPRL Mode and Derate}
 	\item{AP / FD Mode Selector Panel}{Check Set for Takeoff}
 	\item{ADF Radios}{Set As Required}
 	\item{Speed Brake Lever}{Down Detent}
@@ -312,7 +307,7 @@
 	\item{VHF Comm Radios}{Set as Required}
 	\item{Selcal}{Set}
 	\item{Radar}{Set Gain \& Tilt}
-	\item{Transponder}{Set Squawk Code, Set STBY, Set ATC Transfer Mode \& ALT RPTG Switches}
+	\item{Transponder}{Set Squawk Code, Set STBY / XPDR, Set ATC Transfer Mode \& ALT RPTG Switches}
 \end{continuedchecklist}
 
 \begin{checklist}{Final Cockpit Preparation - F/E}
@@ -334,8 +329,7 @@
 	}
 	\item{All Cargo Doors}{Closed}
 	\note{NOTE: Fwd \& aft cargo doors must be closed before transferring electrical power to the engine generators}
-	\item{Takeoff Data}{Check V-Speeds, Stab Trim \& Green Band Settings,\\Rotation Target Attitude, EPRL Mode and Derate, Compare to Pilot Panel}
-	\item{Before Start Checklist}{Perform} % Emergency lights are set when?, Air Pumps
+	\item{Before Start Checklist}{Perform}
 \end{checklist}
 
 % 222 for CF6
@@ -360,9 +354,9 @@
 		\item{At Start Cutout}{Start lever IDLE if RICH was used}
 		\item{CSD PRESS (OIL) Light}{Check Extinguished}
 		\item{N1, EGT, Fuel Flow, N2, Oil Temperature \& -Pressure}{Check Normal}
-		\item{ENG OIL PRESS Lights}{Check Extinguished} % Does it exist?
-		\item{Hydraulic System 4 Electric Pump Switch}{Check Off}
 	}
+	\item{Hydraulic System 4 Electric Pump Switch}{Check Off}
+	\item{Start Valve}{Disarm}
 \end{continuedchecklist}
 
 \begin{checklist}{After Start Procedure}
@@ -445,7 +439,8 @@
 	\item{TO Gross Weight}{Confirm, Crosscheck Calculator and Digital Readout}
 	\item{Fuel Heat}{As Required, Off for Takeoff}
 	\item{Takeoff Announcement}{Perform}
-	\item{Annunciator Lights}{Check Pilot Panels \& F/E Door Annunciator Lights Extinguished\\Except GRD SAF RELAY ON Light} % Checklist
+	\item{Annunciator Lights}{Check Pilot Panels \& F/E Door Annunciator Lights Extinguished\\Except GRD SAF RELAY ON Light}
+		\item{Before Takeoff Checklist}{Perform to Line}
 	\condition{When cleared onto runway}{
 		\item{Transponder}{On, TA/RA}
 		\item{Ignition}{As Required, SYS 1 / 2 FLT START for Standing Water or Slush}
@@ -455,7 +450,7 @@
 	}
 \end{continuedchecklist}
 
-\begin{checklist}{Takeoff Procedure} % Alt Sel
+\begin{checklist}{Takeoff Procedure}
 	\note{Flaps are retracted to 10 at V2 + 20, 5 at V2 + 40, 1 at V2 + 60 and 0 at V2 + 80} % See in p. 263
 	\item{Thrust}{Stabilize at 1.1 EPR, then Set for Takeoff via Autothrottle or manually}
 	\item{ET}{Start}
@@ -574,6 +569,7 @@
 		\item{A/T Mode Selector}{Select Speed}
 	}
 	\item{Air Conditioning Packs}{All Fully Open}
+	\item{Suppl. Vent Fans Switch}{On}
 	\item{Flight/Cabin Altitude Indicator}{Place at Destination Field Elevation}
 	\item{Cabin Altitude}{Check Moving in Proper Direction}
 	\item{Vertical Rate}{Check as Set}
@@ -601,7 +597,7 @@
 	\condition{Hydraulic System Checks}{
 		\item{Air Driven Pump Switches}{Check Auto}
 		\item{Pressures}{Check within Green Band}
-		\item{LOW QTY, low PRESS, OVERHEAT, HYD SYS PRESS lights}{check extinguished}
+		\item{LOW QTY, PRESS, OVERHEAT Lights}{check extinguished}
 		\item{Hydraulic Fuel Temperatures}{Check Within Limits}
 	}
 	\condition{Passing 10000ft}{
@@ -615,15 +611,15 @@
 	\item{Landing Data}{Compute Reference Speeds}
 	\item{EPRL Mode Selector}{Set GA}
 	\item{Radio/INS Switches}{Select Radio}
-	\item{Flight Directors, Autopilots \& Navigation Instruments}{Set for Approach}
+	\item{Flight Directors, Autopilots \& Navigation Instruments}{Set for Approach} % Sense?
 	\item{Flaps}{Extend on Schedule, Observe Speeds, Check LE Flap Indications}
-	\item{Speed Brake Level}{Check Down Detent}
+	\item{Speed Brake Lever}{Check Down Detent}
 	\condition{Flap Extension Schedule} {
 		\item{At roughly 25 nm}{Decelerate to clean Speed}
 		\item{Until 15 nm}{Decelerate to Flaps 10}
 		\item{Until 10 nm}{Set Flaps 20}
 	}
-	\item{Descent - Approach Checklist}{Perform}
+	\item{Descent - Approach Checklist}{Perform} % Move up, GA?
 	\item{At Outer Marker or roughly 8 nm}{Gear Down, Decelerate to Flaps 20 Speed}
 	\item{Ignition Switches Sys 1 or 2}{FLT START}
 	\item{Speed Brake}{Arm}
@@ -642,15 +638,15 @@
 	\item{Speedbrake}{Down Detent, can be left in Armed if another approach is to be made}
 \end{checklist}
 
-\begin{checklist}{After Landing Procedure}
+\begin{checklist}{After Landing Procedure} % Body Gear Steering
 	\note{When clear of the active runway}
 	\item{Speed Brakes}{Down}
 	\item{Landing \& Runway Turnoff Lights}{As Required}
 	\item{Strobe Lights}{Off}
 	\item{Flaps}{Retract}
 	\item{Stabilizer Trim}{Set Neutral (3)}
-	\item{Transponder}{Standby}
-	\item{Weather Radar}{Off}
+	\item{Transponder}{Standby / XPDR}
+	\item{Weather Radar}{Off} % Turn On?
 	\item{Ignition Switches}{Off}
 	\item{Galley Power Bus Switches}{Off}
 	\note{Galley Power can be reestablished when on APU or external power}
@@ -687,7 +683,7 @@
 	\item{Reserve Fuel Transfer Switches}{Closed, Check Lights}
 	\item{Air Conditioning}{Turn Packs, Recirculating Fans, Trim Air Switches off\\when no longer required}
 	\item{Aft Cargo Heat}{Off, Check On Light Extinguished}
-	\item{Flight Recorder}{Off, Check Off Light Illuminates}
+	\item{Flight Recorder}{Check Recording Light Extinguished}
 	\item{Cockpit Lights}{As Required}
 	\item{Oxygen}{100\% \& Off}
 	\specialitem{INS Mode}{Off}
