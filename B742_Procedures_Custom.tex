@@ -131,7 +131,8 @@
 	\item{Instrument Warning Test}{Perform, Check Lights}
 	\item{Throttle 3}{Move Forward to Check Config Warning Horn}
 	\item{Audio Panel}{Configure as Desired}
-	\item{WXR Radar}{STBY, Tilt +5}
+	\item{WXR Radar}{STBY}
+	\item{WXR Radar Tilt \& TCAS Elev}{Configure as desired}
 	\condition{Autothrottle Control Panel}{
 		\specialitem{Test}{Perform at TOD \& CLB, Check EPR Limits on Main Panel increase}
 		\item{EPRL Mode}{Set TOD}
@@ -314,29 +315,31 @@
 	\item{Air Pumps}{All On}
 	\item{Electric Hydraulic Pump}{Check Off, Close Guard}
 	\item{Aft Cargo Heat}{Normal}
+	\item{After Start Checklist}{Perform}
 	\item{Flaps}{Select}
 	\item{Stab Trim}{Set}
 	\item{Aileron \& Rudder Trim}{Check Zero}
 	\item{Flight Control Check}{Perform}
-	\item{After Start Checklist}{Perform}
-	\item{APU}{Switch Off 2 Minutes after Pneumatic Operation}
-	\item{Taxi Checklist}{Perform}
 \end{continuedchecklist}
 
 \begin{checklist}{Taxi}
+	\item{Runway Turnoff Lights}{On After Taxi Clearance Given}
+	\item{Taxi}{Start}
+	\item{APU}{Switch Off 2 Minutes after Pneumatic Operation}
+	\item{Taxi Checklist}{Perform}
 	\condition{After Leaving Ramp} {
 		\item{Autothrottle Mode}{EPR}
 		\item{EPRL Mode}{Check TOD}
 		\item{Weather Radar Mode}{WXR}
-		\item{Transponder}{TA/RA}
-		\item{Cabin Crew}{Notify For Takeoff}
 	}
 	\condition{Before Runway Entry} {
 		\item{All PACKs}{Switch Off}
 		\item{Ignition Switches}{All Flight Start}
+		\item{Cabin Crew}{Notify For Takeoff}
 		\item{Landing Lights}{On}
-		\item{Runway Turnoff Lights}{Off}
+		%\item{Runway Turnoff Lights}{Off}
 		\item{Strobe Lights}{On}
+		\item{Transponder}{TA/RA}
 		\item{Before Takeoff Checklist}{Perform, Skip Body Gear Steering}
 	}
 	\condition{After Lineup}{
@@ -369,6 +372,7 @@
 		\item{Gear Lever}{Off}
 		\item{Ignition}{Turn Off}
 		\item{Landing Lights}{Turn Off Half}
+		\item{Runway Turnoff Lights}{Turn Off}
 		\item{PACKs}{All On}
 		\item{Fuel Config}{Adjust}
 		\item{Fuel Heat}{Auto}
@@ -393,6 +397,7 @@
 	\condition{At TOC} {
 		\item{EPRL Mode}{CRZ}
 		\item{Air Conditioning System}{Reconfigure for Cruise}
+	\item{WXR Radar Tilt \& TCAS Elev}{Reconfigure as desired}
 	}
 	\item{INS Waypoints}{Update if Necessary}
 	\item{Fuel Config}{Adjust when Necessary}
@@ -427,6 +432,11 @@
 	\item{Fuel Heat}{Off}
 	\item{Reserve Fuel Valves}{Open}
 	\item{Air Conditioning System}{Reconfigure for Descent}
+	\item{WXR Radar Tilt \& TCAS Elev}{Reconfigure as desired}
+	\condition{If Autopilot is responsible for holding speed} {
+		\item{Autothrottle Mode}{Speed}
+		\item{Speed Bug}{Set to 250 kts or Clean Speed}
+	}
 	\condition{Passing 10000ft}{
 		\item{Half of the Landing Lights}{Turn On}
 		\item{Logo Lights}{On If Desired}
@@ -457,9 +467,12 @@
 	\condition{Once On Glidepath} {
 		\item{Missed Approach Altitude}{Set}
 	}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\item{At 50 ft}{Retard Thrust Levers}
 	\item{At 30 ft}{Flare}
-\end{checklist}
+\end{continuedchecklist}
 
 \begin{checklist}{Go Around}
 	\item{Go Around Button}{Press}
@@ -491,17 +504,16 @@
 		\item{FDs}{Off}
 		\item{Stabilizer Trim}{Set 7}
 		\item{Transponder}{XPDR}
-		\item{Weather Radar}{Stby}
-		\item{Weather Radar Tilt}{+0}
+		\item{WXR Radar}{Stby, Tilt +0}
 		\item{Pressurization Mode Select}{MAN}
 		\item{Outflow Valves}{Open Manually if Necessary}
 		\item{Aft Cargo Heat}{Off}	
 	}
-	\item{After Landing Checklist}{Perform}
-	\item{APU Power Selector}{On}
 \end{checklist}
 
 \begin{continuedchecklist}
+	\item{After Landing Checklist}{Perform}
+	\item{APU Power Selector}{On}
 	\condition{When entering Ramp}{
 		\item{APU}{Start}
 	}
@@ -544,10 +556,7 @@
 
 \begin{checklist}{Shutdown}
 	\specialitem{Emergency Lights \& No Smoking Signs}{Off}
-\end{checklist}
-
-\begin{continuedchecklist}
-	\specialitem{INS \& Radio Master Switches}{Off}
+	\specialitem{INS Systems \& Radio Master Switches}{Off}
 	\specialitem{WXR Radar Display}{Off}
 	\specialitem{Weather Radar}{Off}
 	\specialitem{PACKS}{All Closed}
@@ -567,6 +576,32 @@
 	}
 	\specialitem{Secure Cockpit Checklist}{Finish}
 	\specialitem{Battery}{Off after APU Inlet Door Closed}
+\end{checklist}
+
+\begin{checklist}{Holding around a waypoint with the LTN-92}
+	\item{Inbound \& Outbound and 90° Perpendicular Course in Hold Direction}{Determine}
+	\condition{Add Auxiliary Waypoints before the Hold Waypoint} {
+		\item{Inbound Auxiliary Waypoint}{Box 2 in Outbound Bearing from Hold Waypoint, 10 - 15nm}
+		\item{Turn Auxiliary Waypoint}{Box 3 in Perpendicular Bearing from Hold Waypoint, 5 - 10nm}
+	}
+	\condition{Once Inbound Hold Waypoint} {
+		\item{MCP}{Select Heading Mode to Perform Hold Entry}
+		\item{Boxes 2 \& 3}{Leg from Aux to Hold Waypoint, Manual Leg Switching\\Select CRS Page}
+	}
+	\item{Hold Entry}{Perform According to Charts}
+\end{checklist}
+
+\begin{continuedchecklist}
+	\condition{Hold Procedure}{
+		\item{Inbound Leg}{Fly with INS from Box 2}
+		\item{Perpendicular Course}{Select as Heading}
+		\item{MCP}{Heading Mode Once Time to Waypoint 0.1 Minutes}
+		\item{Outbound Course}{Select As Heading Once Wings start Leveling}
+		\note{The intermediate step via the perpendicular course is necessary if the wind comes from the side of the outbound course to compensate for drift.}
+		\item{Timer}{Start if Box 3 Crosstrack reaches 0}
+		\item{MCP}{INS Mode 5 Seconds before Desired Leg Time Reached}
+		\note{If the INS mode doesn't capture automatically, the heading bug must be used to turn in the correct direction to a heading of roughly 45 - 30° off the inbound course until the INS captures.}
+	}
 \end{continuedchecklist}
 
 \begin{figure}[ht]
