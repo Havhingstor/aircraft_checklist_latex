@@ -245,15 +245,16 @@
 		\item{Electric Hydraulic Pump (System 4)}{On}
 		\item{Brake Pressure}{Check Increase to Green Band}
 	}
+	\item{PACKs}{Turn Off}
+	\note{PACKs can be left on if AC is needed and push \& start is delayed}
 	\item{Bleed Valves}{Open}
 	\item{Parking Brake}{Check Set}
 	\item{Ground Equipment}{Remove}
 	\item{Before Start Checklists}{Perform}
 	\condition{Before Start Checklist Considerations} {
 		\item{Flight Director}{Manually Check, Takeoff with FD on}
-		% \item{Bleed Controls}{Skip, Leave PACKs on while on Stand}
 		\item{EPR Computer}{Manually Check, Takeoff in TOD Mode}
-		\item{Air Conditioning Controls}{Skip, Leave PACKs on while on Stand}
+		\item{Air Conditioning Controls}{Skip if PACKs are still on}
 	}
 	\condition{Hydraulic Pressurization} {
 		\item{Wait For}{Hydraulic Pressurization OK}
@@ -271,16 +272,16 @@
 	\item{Beacon Light}{On}
 	\item{Seatbelts and No Smoking Signs}{Verify On}
 	\item{Body Gear Steering}{Verify Armed}
-	\item{One PACK}{Switch Off (One is still on)}
 	\item{Electrical Panel}{Check}
 	\item{Galley Power}{Switch Off}
+	\item{PACKs}{Check at most one still on}
 	\item{Hydraulic Pressure 1 \& 4}{Verify}
 	\item{Pushback}{Start}
 	\note{End pushback with straight segment to straighten Body Gear Steering.}
 \end{checklist}
 
 \begin{checklist}{Engine Start}
-	\item{All PACKs}{Switch Off}
+	\item{PACKs}{Check All Off}
 	\item{Before Start Checklist}{Go over Skipped Items}
 	\item{Fuel Pumps}{Check All On}
 	\item{Engine Oil Quantities}{Check}
@@ -512,6 +513,7 @@
 \end{checklist}
 
 \begin{continuedchecklist}
+	\note{If the taxi is very short the APU can be started before the After Landing Checklist is performed}
 	\item{After Landing Checklist}{Perform}
 	\item{APU Power Selector}{On}
 	\condition{When entering Ramp}{
