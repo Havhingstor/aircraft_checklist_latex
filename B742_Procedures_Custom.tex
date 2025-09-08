@@ -346,6 +346,7 @@
 	\condition{After Lineup}{
 		\item{Gear Not Centred Lights}{Check Off}
 		\item{Body Gear Steering}{Off, Close Guard}
+		\item{Fuel Screenshot}{Take}
 	}
 \end{checklist}
 
@@ -360,15 +361,9 @@
 
 \begin{checklist}{Initial Climb}
 	\note{A flap setting can be used if the speed is at or above the respective bug.\\Limit turns to 15° until V2 + 100 is reached.\\When flying close (< 10 - 15 nm) to a VOR, don't use this VOR for VOR/LOC. Switch to heading mode instead.}
-	\item{Close In Turns $\leq$ 25°}{Fly in Takeoff Config if necessary}
-	\item{Thrust Reduction Height (1500ft)}{Wait For}
-	\item{EPRL Mode}{CLB}
-	\note{Reducing thrust to CLB can be delayed until Flaps 5 are set if a steeper climb is required.}
-	\condition{Flaps 20 Takeoff} {
-		\item{Flaps 10 Speed}{Accelerate To}
-		\item{Flaps 10}{Set}
-	}
-	\item{At Acceleration Height (immediately or 3000ft)}{Accelerate to\\Restriction, 250 kts or Climb Speed}
+	\item{Close In Turns $\leq$ 30°}{Fly in Takeoff Config if necessary}
+	\item{At 1000ft}{Start Acceleration and Retract Flaps}
+	\item{Once Flaps 5 Reached}{Set CLB Thrust}
 	\condition{Cleanup} {
 		\item{Gear Lever}{Off}
 		\item{Ignition}{Turn Off}
@@ -382,9 +377,6 @@
 	\condition{Passing Transition Altitude}{
 		\itemcustcase{Altimeter}{SET STANDARD PRESSURE 29.92 inHg / 1013 hPa}
 	}
-\end{checklist}
-
-\begin{continuedchecklist}
 	\condition{Passing 10000ft} {
 		\item{Best Climb Speed}{Accelerate To}
 		\item{All Landing \& Logo Lights}{Off}
@@ -392,7 +384,7 @@
 		\item{Seatbelt Signs}{Off If Desired}
 		\item{After Takeoff Checklist}{Perform}
 	}
-\end{continuedchecklist}
+\end{checklist}
 
 \begin{checklist}{Cruise}
 	\condition{At TOC} {
@@ -429,10 +421,13 @@
 \begin{checklist}{Top of Descent}
 	\item{Altitude Bug}{Set cleared Altitude or first Restriction}
 	\item{Descent}{Start, Stay at current Speed until 10000ft}
+	\item{Air Conditioning System}{Reconfigure for Descent}
 	\item{Cabin Pressurization Altitude}{Set Landing Alt on White Band, Set Destination QNH}
 	\item{Fuel Heat}{Off}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\item{Reserve Fuel Valves}{Open}
-	\item{Air Conditioning System}{Reconfigure for Descent}
 	\item{WXR Radar Tilt \& TCAS Elev}{Reconfigure as desired}
 	\condition{If Autopilot is responsible for holding speed} {
 		\item{Autothrottle Mode}{Speed}
@@ -449,7 +444,7 @@
 	\condition{Passing Transition Level} {
 		\item{Altimeter}{Set Pressure at Destination Airport}
 	}
-\end{checklist}
+\end{continuedchecklist}
 
 \begin{checklist}{Approach}
 	\item{At roughly 25 nm}{Decelerate to clean Speed}
@@ -468,15 +463,15 @@
 	\condition{Once On Glidepath} {
 		\item{Missed Approach Altitude}{Set}
 	}
-\end{checklist}
-
-\begin{continuedchecklist}
 	\item{At 50 ft}{Retard Thrust Levers}
 	\item{At 30 ft}{Flare}
-\end{continuedchecklist}
+\end{checklist}
 
 \begin{checklist}{Go Around}
 	\item{Go Around Button}{Press}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\item{Go Around Thrust}{Set or activate Autothrust}
 	\item{Pitch \& Speed}{Achieve 12$^\circ$, Hold Vref + 10, use Pitch Bar}
 	\item{Flaps}{Set 20}
@@ -487,7 +482,7 @@
 	\item{Altitude Select}{Activate}
 	\item{Autothrust}{Manually activate Speed Mode or Set Speed bug to Clean Speed}
 	\item{Clean Up}{Via After Takeoff Procedure}
-\end{checklist}
+\end{continuedchecklist}
 
 \begin{checklist}{After Landing \& Taxi}
 	\item{Body Gear Steering}{Arm}
@@ -510,11 +505,9 @@
 		\item{Outflow Valves}{Open Manually if Necessary}
 		\item{Aft Cargo Heat}{Off}	
 	}
-\end{checklist}
-
-\begin{continuedchecklist}
 	\note{If the taxi is very short the APU can be started before the After Landing Checklist is performed}
 	\item{After Landing Checklist}{Perform}
+	\item{Fuel Screenshot}{Take}
 	\item{APU Power Selector}{On}
 	\condition{When entering Ramp}{
 		\item{APU}{Start}
@@ -522,7 +515,7 @@
 	\condition{Before Turning Onto Stand} {
 		\item{Runway Turnoff Lights}{Off}
 	}
-\end{continuedchecklist}
+\end{checklist}
 
 \begin{checklist}{Parking}
 	\item{Parking Brake}{Set}
@@ -565,6 +558,9 @@
 	\specialitem{Bleed Valves}{All Closed}
 	\specialitem{Recirc Fans}{Off}
 	\specialitem{Gasper Fans \& Trim Air}{Off}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\specialitem{Ground Power \& APU Generators}{Disconnect}
 	\specialcondition{If APU Running}{
 		\item{APU Bleed}{Off}
@@ -578,7 +574,7 @@
 	}
 	\specialitem{Secure Cockpit Checklist}{Finish}
 	\specialitem{Battery}{Off after APU Inlet Door Closed}
-\end{checklist}
+\end{continuedchecklist}
 
 \begin{checklist}{Holding around a waypoint with the LTN-92}
 	\item{Inbound \& Outbound and 90° Perpendicular Course in Hold Direction}{Determine}
@@ -591,9 +587,6 @@
 		\item{Boxes 2 \& 3}{Leg from Aux to Hold Waypoint, Manual Leg Switching\\Select CRS Page}
 	}
 	\item{Hold Entry}{Perform According to Charts}
-\end{checklist}
-
-\begin{continuedchecklist}
 	\condition{Hold Procedure}{
 		\item{Inbound Leg}{Fly with INS from Box 2}
 		\item{Perpendicular Course}{Select as Heading}
@@ -604,7 +597,7 @@
 		\item{MCP}{INS Mode 5 Seconds before Desired Leg Time Reached}
 		\note{If the INS mode doesn't capture automatically, the heading bug must be used to turn in the correct direction to a heading of roughly 45 - 30° off the inbound course until the INS captures.}
 	}
-\end{continuedchecklist}
+\end{checklist}
 
 \begin{figure}[ht]
     \centering
