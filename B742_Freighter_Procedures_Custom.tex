@@ -321,8 +321,7 @@
 	\item{APU}{Switch Off 2 Minutes after Pneumatic Operation}
 	\item{Before Takeoff Checklist to the Line}{Perform}
 	\condition{After Leaving Ramp} {
-	\item{Autothrottle \& N1 Limit Mode}{Check N1 \& TOD}
-		% \item{N1 Lim Mode}{Check TOD}
+		\item{Autothrottle \& N1 Limit Mode}{Check N1 \& TOD}
 		\item{Rating Select}{Check}
 		\item{Weather Radar Mode}{WXR}
 	}
@@ -330,7 +329,6 @@
 		\item{All PACKs}{Switch Off}
 		\item{Ignition Switches}{All Flight Start}
 		\item{Landing Lights}{On}
-		%\item{Runway Turnoff Lights}{Off}
 		\item{Strobe Lights}{On}
 		\item{Transponder}{TA/RA}
 		\item{Before Takeoff Checklist}{Perform, Skip Body Gear Steering}
@@ -414,10 +412,10 @@
 	\item{Descent}{Start, Stay at current Speed until 10000ft}
 	\item{Air Conditioning System}{Reconfigure for Descent}
 	\item{Cabin Pressurization Altitude}{Set Landing Alt on White Band, Set Destination QNH}
+	\item{Reserve Fuel Valves}{Open}
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{Reserve Fuel Valves}{Open}
 	\item{WXR Radar Tilt \& TCAS Elev}{Reconfigure as desired}
 	\condition{If Autopilot is responsible for holding speed} {
 		\item{Autothrottle Mode}{Speed}
@@ -429,8 +427,7 @@
 		\item{Seatbelt Signs}{Check On}
 		\item{N1 Lim Mode}{Go Around}
 		\item{Humidifier}{Off}
-		% \item{Descent \& Approach Checklist}{Perform, Skip Radio/INS Switches if necessary}
-		\item{Descent \& Approach Checklist}{Perform}
+		\item{Descent \& Approach Checklist}{Perform, Skip Radio \& Nav Instruments if necessary}
 	}
 	\condition{Passing Transition Level} {
 		\item{Altimeter}{Set Pressure at Destination Airport}
@@ -459,11 +456,11 @@
 
 \begin{checklist}{Go Around}
 	\item{Go Around Button}{Press}
+	\item{Go Around Thrust}{Set or activate Autothrust}
+	\item{Pitch \& Speed}{Achieve 12$^\circ$, Hold Vref + 10, use Pitch Bar}
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{Go Around Thrust}{Set or activate Autothrust}
-	\item{Pitch \& Speed}{Achieve 12$^\circ$, Hold Vref + 10, use Pitch Bar}
 	\item{Flaps}{Set 20}
 	\condition{Once Positive Rate}{
 		\item{Gear}{Up}
@@ -520,9 +517,6 @@
 	\item{Ground Connections}{Establish}
 	\item{Unloading}{Begin}
 	\note{If the APU isn't used for electric power or bleed air, it can be shut off now.}
-	% \condition{Once Chocks are in Place}{
-	% 	\item{Parking Brake}{Disengage}
-	% }
 	\item{ADPs}{Off}
 	\item{Fuel Pumps}{Off}
 	\item{Reserve Valves}{Close}
@@ -547,19 +541,16 @@
 	\specialitem{Bleed Valves}{All Closed}
 	\specialitem{Recirc Fans}{Off}
 	\specialitem{Trim Air}{Off}
+	\specialitem{Oxygen Valve}{Close}
+	\specialitem{Ground Power \& APU Generators}{Disconnect}
 \end{checklist}
 
 \begin{continuedchecklist}
-	\specialitem{Oxygen Valve}{Close}
-	\specialitem{Ground Power \& APU Generators}{Disconnect}
 	\specialcondition{If APU Running}{
 		\item{APU Bleed}{Off}
 		\item{APU}{Switch Off 2 Minutes after Pneumatic Operation}
 	}
-	% \specialcondition{Shutdown Remaining Systems}{
-	% 	\item{Galley Power}{Off}
 	\specialitem{Standby Power}{Off}
-	% }
 	\specialitem{Battery}{Off after APU Inlet Door Closed}
 	\specialitem{Secure Cockpit Checklist}{Finish}
 \end{continuedchecklist}

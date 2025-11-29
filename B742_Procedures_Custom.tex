@@ -338,7 +338,6 @@
 		\item{Ignition Switches}{All Flight Start}
 		\item{Cabin Crew}{Notify For Takeoff}
 		\item{Landing Lights}{On}
-		%\item{Runway Turnoff Lights}{Off}
 		\item{Strobe Lights}{On}
 		\item{Transponder}{TA/RA}
 		\item{Before Takeoff Checklist}{Perform, Skip Body Gear Steering}
@@ -531,9 +530,6 @@
 	\item{Ground Connections}{Establish}
 	\item{Unloading}{Begin}
 	\note{If the APU isn't used for electric power or bleed air, it can be shut off now.}
-	\condition{Once Chocks are in Place}{
-		\item{Parking Brake}{Disengage}
-	}
 	\item{ADPs}{Off}
 	\item{Fuel Pumps}{Off}
 	\item{Reserve Valves}{Close}
@@ -558,10 +554,10 @@
 	\specialitem{Bleed Valves}{All Closed}
 	\specialitem{Recirc Fans}{Off}
 	\specialitem{Gasper Fans \& Trim Air}{Off}
+	\specialitem{Ground Power \& APU Generators}{Disconnect}
 \end{checklist}
 
 \begin{continuedchecklist}
-	\specialitem{Ground Power \& APU Generators}{Disconnect}
 	\specialcondition{If APU Running}{
 		\item{APU Bleed}{Off}
 		\item{APU}{Switch Off 2 Minutes after Pneumatic Operation}
