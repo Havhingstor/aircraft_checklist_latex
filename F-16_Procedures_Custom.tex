@@ -1,0 +1,264 @@
+\documentclass[sim-use]{checklist}
+\usepackage{gensymb}
+\usepackage{textcomp}
+
+\logo{logo_white/lockheed.png}
+\title{Normal Procedures}
+\subtitle{Lockheed Martin \\ F-16C/D (Blk 40 - 52)}
+\version{Version: 1.0 \\ \today}
+
+\begin{document}
+
+\begin{checklist}{Before Starting Engine}
+	\item{COCKPIT INTERIOR CHECK}{Perform}
+	\condition{EXT LIGHTING Panel} {
+		\item{MASTER COVERT}{Norm}
+		\item{ANTI COLLISION}{Off}
+		\item{POSITION}{Steady}
+		\item{WING/TAIL}{Brt}
+		\item{FUSELAGE}{Off}
+		\item{FORMATION}{100\%}
+	}
+	\item{C\&I}{BACKUP}
+	\item{MASTER FUEL}{Check MASTER}
+	\item{ENG FEED}{NORM}
+	\condition{Activate Battery} {
+		\item{MAIN PWR}{Batt}
+		\item{ELEC SYS, FLCS RLY, MAIN \& STBY GEN Lights}{Check On}
+		\item{FLCS PWR TEST}{Hold at Test}
+		\item{FLCS PMG, TO FLCS, FLCS PWR 4 Lights}{Check On}
+		\item{FLCS RLY}{Check Off}
+		\item{FLCS PWR TEST}{Release}
+		\item{MAIN PWR}{MAIN PWR}
+	}
+	\condition{Audio Setup}{
+		\item{COMM1 \& 2}{Set as desired}
+		\item{COMM1 \& 2}{Verify SQL}
+		\item{MSL \& THREAT Volume}{Set > 50\%}
+		\item{ILS}{Set on, as desired}
+		\item{INTERCOM}{Set 100\%}
+	}
+	\condition{Backup UHF Setup}{
+		\item{Left Function Knob}{BOTH}
+		\item{Right Function Knob}{As Desired}
+	}
+	\item{Interior Lighting Panel}{Set as desired}
+	\item{AIR SOURCE}{NORM}
+	\item{ANTI ICE}{ON}
+	\item{Canopy}{Close \& Lock}
+\end{checklist}
+
+\begin{checklist}{Engine Start}
+	\item{Throttle}{Check Cut-Off}
+	\item{JFS Switch}{Select Start 2}
+	\item{JFS RUN Light}{Verify Illuminated within 30s}
+	\item{SEC Caution Light}{Verify Extinguish at 20\% RPM}
+	\item{Throttle}{Set Idle at 25\%RPM}
+	\item{HYD/OIL PRESS Light}{Verify Extinguish at 30 - 35\% RPM}
+	\item{FTIT}{Monitor, Must be Below 750\degree\ C}
+	\note{FTIT should roughly stay 10x the RPM until it falls again.}
+	\item{FLCS PMG Light}{Verify Extinguish at 40 - 45\% RPM}
+	\item{JFS}{Verify Off at ca. 55\% RPM}
+	\item{ENGINE, STBY GEN Light}{Verify Extinguish at ca. 60\% RPM}
+	\item{MAIN GEN Light}{Verify Extinguish ca. 10s later}
+	\condition{Idle Checks PW 229 / Block 52} {
+		\item{FUEL FLOW}{Check 500 - 2000 pph}
+		\item{NOZ POS}{Check > 80\%}
+		\item{FTIT}{Check 625\degree\ C or less, abort if over 800\degree\ C}
+		\item{HYD PRESS A \& B}{Check needles are vertical}
+	}
+	\condition{Idle Checks GE 129 / Block 50} {
+		\item{FUEL FLOW}{Check 700 - 1700 pph}
+		\item{NOZ POS}{Check > 94\%}
+		\item{FTIT}{Check 650\degree\ C or less, abort if over 800\degree\ C}
+		\item{HYD PRESS A \& B}{Check needles are vertical}
+	}
+	\condition{Idle Checks PW 220 / Block 42} {
+		\item{FUEL FLOW}{Check 500 - 1500 pph}
+		\item{NOZ POS}{Check 70 - 95\%}
+		\item{FTIT}{Check 575\degree\ C or less, abort if over 800\degree\ C}
+		\item{HYD PRESS A \& B}{Check needles are vertical}
+	}
+	\condition{Idle Checks GE 100 / Block 40} {
+		\item{FUEL FLOW}{Check 700 - 1700 pph}
+		\item{NOZ POS}{Check > 94\%}
+		\item{FTIT}{Check 650\degree\ C or less, abort if over 800\degree\ C}
+		\item{HYD PRESS A \& B}{Check needles are vertical}
+	}
+	\item{Gear Lights}{Check 3 Green}
+\end{checklist}
+
+\begin{checklist}{After Engine Start}
+	\condition{FIRE \& OHEAT DETECT Test} {
+		\item{FIRE \& OHEAT DETECT}{Press and Hold}
+		\item{ENG FIRE, OVERHEAT, MASTER CAUTION Lights}{Check On}
+		\item{FIRE \& OHEAT DETECT}{Release}
+		\item{ENG FIRE, OVERHEAT Lights}{Check Off}
+	}
+	\condition{MAL \& IND LTS Test} {
+		\item{MAL \& IND LTS}{Press and Hold}
+		\item{All Lights}{Check On}
+		\item{Voice Message System}{Verify Operation}
+		\item{MAL \& IND LTS}{Release}
+	}
+	\condition{PROBE HEAT Test} {
+		\item{PROBE HEAT Switch}{PROBE HEAT}
+		\item{MASTER CAUTION Light}{Verify Off}
+		\item{PROBE HEAT Switch}{Test}
+		\item{PROBE HEAT Caution Light}{Verify Flashing}
+		\item{PROBE HEAT Switch}{Off}
+	}
+	\condition{EPU Check} {
+		\item{EPU Safety Pin}{Remove}
+		\item{EPU}{Cycle Off, then Norm}
+		\item{EPU GEN, EPU PMG Lights}{Check Off}
+		\item{Throttle}{Set 80\% RPM}
+		\item{EPU/GEN Switch}{Hold}
+		\item{EPU AIR Light}{Check On}
+		\item{EPU GEN, EPU PMG Lights}{Check Off}
+		\item{FLCS PWR 4 Lights}{Check On}
+		\item{EPU RUN Light}{On after 5s}
+		\item{EPU/GEN Switch}{Release}
+		\item{Throttle}{Set Idle}
+		\note{If the green run light doesn't appear, reinitialise the test with higher throttle.}
+	}
+\end{checklist}
+
+\begin{continuedchecklist}
+	\condition{Avionics Powerup} {
+		\item{MMC, ST STA, MFD, UFC, GPS, DL}{On}
+		\item{Altimeter}{Set QNH}
+		\item{INS}{Align Norm once DED on}
+		\item{RDR ALT}{STBY}
+		\item{FCR}{On}
+		\item{LEFT / RIGHT HDPT}{On where needed}
+		\item{DED INS Page}{Verify Status increasing}
+		\item{ICP SYM Wheel}{Move Up to activate HUD}
+		\item{HMCS SYMBOLOGY}{ON}
+	}
+	\condition{Reset Warnings}{
+		\item{F-ACK}{Press to review PFLD}
+		\item{MASTER CAUTION}{Press to acknowledge and reset}
+		\item{FLCS}{Reset if fault shown on PFLD}
+		\item{MFL}{Reset on MFD Test Page}
+	}
+	\item{IFF MASTER}{STBY}
+	\item{C\&I}{UFC}
+	\item{DTC}{Load on MFD - DTE Page}
+	\item{Radios}{Set as Desired, UHF Ch. 2, VHF Ch. 15}
+\end{continuedchecklist}
+
+\begin{checklist}{Avionics \& Checks}
+	\condition{FLCS BIT}{
+		\item{Flight Controls}{Cycle for 20s}
+		\item{FLCS Panel}{Check All Switches Down}
+		\item{FLCS BIT}{Start}
+		\note{If the BIT fails, repeat the three steps.}
+	}
+	\condition{Digital Backup Test}{
+		\item{DIGITAL BACKUP}{Switch Up / Digital Backup}
+		\item{DBU Warning Light}{Check On}
+		\item{Flight Controls}{Test}
+		\item{DIGITAL BACKUP}{Switch Down / Off}
+		\item{DBU Warning Light}{Check Off}
+	}
+\end{checklist}
+
+\begin{continuedchecklist}
+	\condition{Trim Check}{
+		\item{TRIM/AP DISC}{DISC}
+		\item{Stick Trim}{Verify Disconnected}
+		\item{TRIM/AP DISC}{NORM}
+		\item{Stick Trim}{Verify Functional}
+		\item{Trim}{Centre}
+	}
+	\condition{Air Refueling Check - If refueling might be necessary}{
+		\item{AIR REFUEL}{Open}
+		\item{Right Indexer}{Check Blue RDY Light Illuminated}
+		\item{Stick DISC Button}{Press}
+		\item{Right Indexer}{Check red DISC Light Illuminated for 3s}
+		\item{AIR REFUEL}{Close}
+		\item{Right Indexer}{Check Extinguished}
+	}
+	\item{Audio Panels}{Check Again}
+	\condition{SEC Check}{
+		\item{ENG CONT}{SEC}
+		\item{MASTER CAUTION, SEC Lights}{Check On}
+		\item{NOZ POS}{Check < 5\%}
+		\item{Throttle Response}{Check Smooth RPM}
+		\item{ENG CONT}{PRI}
+		\item{NOZ POS}{Check open again}
+	}
+	\item{Speedbrakes}{Check Open \& Close correctly}
+	\item{THREAT WARNING AUX POWER}{Activate}
+	\condition{CMDS Panel Setup}{
+		\item{RWR \& JMR}{ON}
+		\item{CH \& FL}{ON}
+		\item{01 \& 02}{On if needed}
+		\item{PRGM \& MODE}{Set as needed}
+	}
+	\item{STORES CONFIG}{Set CAT I or III as needed}
+	\condition{RWR Tests}{
+		\item{RWR BIT}{Run}
+		\item{MSL LAUNCH Indicator}{Check by depressing}
+		\item{RWR HANDOFF Mode}{Activate}
+	}
+	\condition{MFD / UFC Setup}{
+		\item{ALOW, TACAN, ILS, BINGO}{Setup}
+		\item{Analog HSI}{Set Mode as desired, TAC / ILS}
+		\item{IFF UFC Page}{Activate Audio Mode}
+		\item{MFD / UFC}{Apply Mission-Specific Setup}
+		\note{This might include things like Laser Mode / Code, Datalink, HMCS Settings.}
+	}
+\end{continuedchecklist}
+
+\begin{continuedchecklist}
+	\condition{Fuel Quantity Checks}{
+		\item{FUEL QTY SEL}{Test}
+		\item{Fuel Gauge Needles}{Check 2000}
+		\item{Fuel Totaliser}{Check 6000}
+		\item{FUEL LOW Lights}{Check Illuminated}
+		\item{Other Fuel Tanks}{Verify Level}
+		\item{NORM Full}{A/L 2675 - 2810, F/R 3100 - 3250}
+		\item{RSVR Full}{460 - 480}
+		\item{INT WING Full}{525 - 550}
+		\item{EXT WING Full}{2300 - 2420}
+		\item{EXT CTR Full}{A/L 0, F/R 1800 - 1890}
+		\item{FUEL QTY SEL}{Norm}
+	}
+	\item{PFLD \& MASTER CAUTION}{Check Again}
+	\item{EPU FUEL REMAIN}{Check 95 - 102\%}
+	\item{INS}{NAV once fully aligned (indicated by blinking ALIGN on HUD)}
+	\condition{Anti-Ice Check}{
+		\item{ANTI-ICE}{Off}
+		\item{FTIT}{Verify decreasing by > 10\degree\ C}
+		\item{ANTI-ICE}{Auto}
+	}
+	\condition{Oxygen Check (After 2 minutes engine idle)}{
+		\item{OBOGS TEST}{BIT}
+		\item{OXY LOW Warning}{Check on for 10s}
+		\item{OBOGS TEST}{OFF}
+		\item{Green Lever}{ON}
+	}
+	\item{HMCS}{Align COARSE \& FINE}
+	\item{LANDING / TAXI Light}{TAXI}
+	\item{POSITION}{Flash}
+\end{continuedchecklist}
+
+\begin{checklist}{EOR Checks (Optional)}
+	\item{Remaining Necessary Configuration \& Arming}{Perform}
+	\note{TGP must be stowed for takeoff.}
+	\item{HMCS}{Align FINE}
+\end{checklist}
+
+\begin{checklist}{Lineup}
+	\item{LANDING / TAXI Light}{LANDING}
+	\item{ANTI COLLISION Light}{1 - 4}
+	\item{Lead Plane}{Lineup on Downwind side}
+	\item{RDR ALT}{On}
+	\item{IFF}{NORM}
+	\item{PROBE HEAT}{PROBE HEAT}
+	\item{Visor}{Lower}
+\end{checklist}
+
+\end{document}
