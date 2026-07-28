@@ -29,11 +29,7 @@
 		\item{FLCS PMG, TO FLCS, FLCS PWR 4 Lights}{Check On}
 		\item{FLCS RLY}{Check Off}
 		\item{FLCS PWR TEST}{Release}
-		\item{MAIN PWR}{MAIN PWR}
-		\item{ELEC SYS, FLCS RLY, MAIN \& STBY GEN Lights}{Check On}
-		\item{SEC Caution, ENGINE \& HYD/OIL PRESS Warning Lights}{Check On}
 	}
-	\item{EPU GEN \& PMG Lights}{Check Off}
 	\condition{Audio Setup}{
 		\item{COMM1 \& 2}{Set as desired}
 		\item{COMM1 \& 2}{Verify SQL}
@@ -48,6 +44,12 @@
 	\item{Interior Lighting Panel}{Set as desired}
 	\item{AIR SOURCE}{NORM}
 	\item{ANTI ICE}{ON}
+	\condition{Activate Main Power}{
+		\item{MAIN PWR}{MAIN PWR}
+		\item{ELEC SYS, FLCS RLY, MAIN \& STBY GEN Lights}{Check On}
+		\item{SEC Caution, ENGINE \& HYD/OIL PRESS Warning Lights}{Check On}
+	}
+	\item{EPU GEN \& PMG Lights}{Check Off}
 	\item{Canopy}{Close \& Lock}
 \end{checklist}
 
