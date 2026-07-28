@@ -30,7 +30,10 @@
 		\item{FLCS RLY}{Check Off}
 		\item{FLCS PWR TEST}{Release}
 		\item{MAIN PWR}{MAIN PWR}
+		\item{ELEC SYS, FLCS RLY, MAIN \& STBY GEN Lights}{Check On}
+		\item{SEC Caution, ENGINE \& HYD/OIL PRESS Warning Lights}{Check On}
 	}
+	\item{EPU GEN \& PMG Lights}{Check Off}
 	\condition{Audio Setup}{
 		\item{COMM1 \& 2}{Set as desired}
 		\item{COMM1 \& 2}{Verify SQL}
@@ -103,7 +106,7 @@
 	}
 	\condition{PROBE HEAT Test} {
 		\item{PROBE HEAT Switch}{PROBE HEAT}
-		\item{MASTER CAUTION Light}{Verify Off}
+		\item{PROBE HEAT Caution Light}{Verify Off}
 		\item{PROBE HEAT Switch}{Test}
 		\item{PROBE HEAT Caution Light}{Verify Flashing}
 		\item{PROBE HEAT Switch}{Off}
@@ -116,8 +119,7 @@
 		\item{EPU/GEN Switch}{Hold}
 		\item{EPU AIR Light}{Check On}
 		\item{EPU GEN, EPU PMG Lights}{Check Off}
-		\item{FLCS PWR 4 Lights}{Check On}
-		\item{EPU RUN Light}{On after 5s}
+		\item{EPU RUN and FLCS PWR 4 Lights}{On after 5s}
 		\item{EPU/GEN Switch}{Release}
 		\item{Throttle}{Set Idle}
 		\note{If the green run light doesn't appear, reinitialise the test with higher throttle.}
@@ -155,23 +157,7 @@
 		\item{FLCS BIT}{Start}
 		\note{If the BIT fails, repeat the three steps.}
 	}
-	\condition{Digital Backup Test}{
-		\item{DIGITAL BACKUP}{Switch Up / Digital Backup}
-		\item{DBU Warning Light}{Check On}
-		\item{Flight Controls}{Test}
-		\item{DIGITAL BACKUP}{Switch Down / Off}
-		\item{DBU Warning Light}{Check Off}
-	}
-\end{checklist}
-
-\begin{continuedchecklist}
-	\condition{Trim Check}{
-		\item{TRIM/AP DISC}{DISC}
-		\item{Stick Trim}{Verify Disconnected}
-		\item{TRIM/AP DISC}{NORM}
-		\item{Stick Trim}{Verify Functional}
-		\item{Trim}{Centre}
-	}
+	\note{Continue while BIT is running.}
 	\condition{Air Refueling Check - If refueling might be necessary}{
 		\item{AIR REFUEL}{Open}
 		\item{Right Indexer}{Check Blue RDY Light Illuminated}
@@ -181,6 +167,9 @@
 		\item{Right Indexer}{Check Extinguished}
 	}
 	\item{Audio Panels}{Check Again}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\condition{SEC Check}{
 		\item{ENG CONT}{SEC}
 		\item{MASTER CAUTION, SEC Lights}{Check On}
@@ -199,16 +188,30 @@
 	}
 	\item{STORES CONFIG}{Set CAT I or III as needed}
 	\condition{RWR Tests}{
-		\item{RWR BIT}{Run}
+		\item{RWR SYS TEST}{Run}
 		\item{MSL LAUNCH Indicator}{Check by depressing}
 		\item{RWR HANDOFF Mode}{Activate}
+	}
+	\condition{Digital Backup Test}{
+		\item{DIGITAL BACKUP}{Switch Up / Digital Backup}
+		\item{DBU Warning Light}{Check On}
+		\item{Flight Controls}{Test}
+		\item{DIGITAL BACKUP}{Switch Down / Off}
+		\item{DBU Warning Light}{Check Off}
+	}
+	\condition{Trim Check}{
+		\item{TRIM/AP DISC}{DISC}
+		\item{Stick Trim}{Verify Disconnected}
+		\item{TRIM/AP DISC}{NORM}
+		\item{Stick Trim}{Verify Functional}
+		\item{Trim}{Centre}
 	}
 	\condition{MFD / UFC Setup}{
 		\item{ALOW, TACAN, ILS, BINGO}{Setup}
 		\item{Analog HSI}{Set Mode as desired, TAC / ILS}
 		\item{IFF UFC Page}{Activate Audio Mode}
 		\item{MFD / UFC}{Apply Mission-Specific Setup}
-		\note{This might include things like Laser Mode / Code, Datalink, HMCS Settings.}
+		\note{This might include things like Laser Mode / Code, Datalink, HMCS Settings, FCR \& HSD Settings.}
 	}
 \end{continuedchecklist}
 
@@ -238,9 +241,9 @@
 		\item{OBOGS TEST}{BIT}
 		\item{OXY LOW Warning}{Check on for 10s}
 		\item{OBOGS TEST}{OFF}
-		\item{Green Lever}{ON}
+		\item{OXYGEN SUPPLY (Green Lever)}{ON}
 	}
-	\item{HMCS}{Align COARSE \& FINE}
+	\item{HMCS}{Align COARSE \& FINE, set Brightness}
 	\item{LANDING / TAXI Light}{TAXI}
 	\item{POSITION}{Flash}
 \end{continuedchecklist}
@@ -256,8 +259,10 @@
 	\item{ANTI COLLISION Light}{1 - 4}
 	\item{Lead Plane}{Lineup on Downwind side}
 	\item{RDR ALT}{On}
+	\item{Ejection Seat}{Arm}
 	\item{IFF}{NORM}
 	\item{PROBE HEAT}{PROBE HEAT}
+	\item{Cockpit Sweep}{Perform \& Check Critical Systems}
 	\item{Visor}{Lower}
 \end{checklist}
 
