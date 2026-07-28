@@ -14,7 +14,7 @@
 	\specialitem{Flaps Lever}{In Same Position as Flaps themselves}
 	\specialitem{Transponder}{Standby}
 	\specialitem{Weather Radar}{Off}
-	\specialitem{Galley Power}{All Off}
+	\specialitem{Galley Power}{Off}
 	\specialitem{Air Demand Hydraulic Pumps}{4 Off}
 	\specialitem{Fuel Jettison Panel}{All Switches Off}
 \end{checklist}
@@ -218,7 +218,7 @@
 		\item{Boost \& Ovrd Pumps}{All On (Where Fuel in Tanks)}
 	}
 	\item{Oil Quantity \& Temp}{Check}
-	\note{The engine oil quantity must be more than 3.5.}
+	% \note{The engine oil quantity must be more than 3.5.}
 \item{Oxygen Valve}{Check in Green Band}
 \end{continuedchecklist}
 
@@ -252,13 +252,13 @@
 	\item{Ground Equipment}{Remove}
 	\condition{Hydraulic Pressurization} {
 		\item{Wait For}{Hydraulic Pressurization OK}
-		\item{Air Hydraulic Pump 1}{On}
+		\item{Air Hydraulic Pump 1}{On if Pushback Desired}
 		\item{Electric Hydraulic Pump (System 4)}{On}
 	}
 	\item{Engine Oil Quantities}{Check}
 	\item{Fuel Pumps}{Check All On}
 	\item{Galley Power}{Switch Off}
-	\item{Before Start Checklists}{Perform}
+	\item{Before Start Checklist}{Perform}
 \end{checklist}
 
 \begin{checklist}{Pushback}
@@ -270,7 +270,7 @@
 	\item{Body Gear Steering}{Verify Armed}
 	\item{Electrical Panel}{Check}
 	\item{PACKs}{Check at most one still on}
-	\item{Hydraulic Pressure 1 \& 4}{Verify}
+	\item{Hydraulic Pressure 1 \& 4}{Verify as Desired}
 	\item{Pushback}{Start}
 	\note{End pushback with straight segment to straighten Body Gear Steering.}
 \end{checklist}
@@ -418,7 +418,6 @@
 \begin{continuedchecklist}
 	\item{WXR Radar Tilt \& TCAS Elev}{Reconfigure as desired}
 	\condition{If Autopilot is responsible for holding speed} {
-		\item{Autothrottle Mode}{Speed}
 		\item{Speed Bug}{Set to 250 kts or Clean Speed}
 	}
 	\condition{Passing 10000ft}{
@@ -529,7 +528,7 @@
 	}
 	\item{Window Heat}{Off}
 	\item{INS}{Check Accuracy, Realign for Through Flight or shut off}
-	\item{Secure Cockpit Checklist}{Perform To Line, Check Brakes (and INS) Manually}
+	\item{Shutdown Checklist}{Perform To Line}
 \end{checklist}
 
 \begin{checklist}{Shutdown}
@@ -552,7 +551,7 @@
 	}
 	\specialitem{Standby Power}{Off}
 	\specialitem{Battery}{Off after APU Inlet Door Closed}
-	\specialitem{Secure Cockpit Checklist}{Finish}
+	\specialitem{Shutdown Checklist}{Finish}
 \end{continuedchecklist}
 
 \begin{checklist}{Holding around a waypoint with the LTN-92}
