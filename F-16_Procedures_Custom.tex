@@ -13,10 +13,10 @@
 	\item{COCKPIT INTERIOR CHECK}{Perform}
 	\condition{EXT LIGHTING Panel} {
 		\item{MASTER COVERT}{Norm}
-		\item{ANTI COLLISION}{Off}
+		\item{ANTI COLLISION}{1 - 4}
 		\item{POSITION}{Steady}
 		\item{WING/TAIL}{Brt}
-		\item{FUSELAGE}{Off}
+		\item{FUSELAGE}{Off (Day) / Brt (Night)}
 		\item{FORMATION}{100\%}
 	}
 	\item{C\&I}{BACKUP}
@@ -59,9 +59,9 @@
 	\item{JFS RUN Light}{Verify Illuminated within 30s}
 	\item{SEC Caution Light}{Verify Extinguish at 20\% RPM}
 	\item{Throttle}{Set Idle at 25\%RPM}
-	\item{HYD/OIL PRESS Light}{Verify Extinguish at 30 - 35\% RPM}
 	\item{FTIT}{Monitor, Must be Below 750\degree\ C}
 	\note{FTIT should roughly stay 10x the RPM until it falls again.}
+	\item{HYD/OIL PRESS Light}{Verify Extinguish at 30 - 35\% RPM}
 	\item{FLCS PMG Light}{Verify Extinguish at 40 - 45\% RPM}
 	\item{JFS}{Verify Off at ca. 55\% RPM}
 	\item{ENGINE, STBY GEN Light}{Verify Extinguish at ca. 60\% RPM}
@@ -94,6 +94,18 @@
 \end{checklist}
 
 \begin{checklist}{After Engine Start}
+	\condition{Avionics Powerup} {
+		\item{MMC, ST STA, MFD, UFC, GPS, DL}{On}
+		\item{ICP SYM Wheel}{Move Up to activate HUD}
+		\item{HMCS SYMBOLOGY}{ON}
+		\item{Altimeter}{Set QNH}
+		\item{INS}{Align Norm once DED on}
+		\item{RDR ALT}{STBY}
+		\item{FCR}{On}
+		\item{LEFT / RIGHT HDPT}{On where needed}
+		\item{DED INS Page}{Verify Status increasing}
+		\item{FLIR / TFR}{STBY to start warm-up}
+	}
 	\condition{FIRE \& OHEAT DETECT Test} {
 		\item{FIRE \& OHEAT DETECT}{Press and Hold}
 		\item{ENG FIRE, OVERHEAT, MASTER CAUTION Lights}{Check On}
@@ -113,6 +125,9 @@
 		\item{PROBE HEAT Caution Light}{Verify Flashing}
 		\item{PROBE HEAT Switch}{Off}
 	}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\condition{EPU Check} {
 		\item{EPU Safety Pin}{Remove}
 		\item{EPU}{Cycle Off, then Norm}
@@ -126,33 +141,18 @@
 		\item{Throttle}{Set Idle}
 		\note{If the green run light doesn't appear, reinitialise the test with higher throttle.}
 	}
-\end{checklist}
+\end{continuedchecklist}
 
-\begin{continuedchecklist}
-	\condition{Avionics Powerup} {
-		\item{MMC, ST STA, MFD, UFC, GPS, DL}{On}
-		\item{ICP SYM Wheel}{Move Up to activate HUD}
-		\item{HMCS SYMBOLOGY}{ON}
-		\item{Altimeter}{Set QNH}
-		\item{INS}{Align Norm once DED on}
-		\item{RDR ALT}{STBY}
-		\item{FCR}{On}
-		\item{LEFT / RIGHT HDPT}{On where needed}
-		\item{DED INS Page}{Verify Status increasing}
-	}
+\begin{checklist}{Avionics \& Checks}
+	\item{IFF MASTER}{STBY}
+	\item{C\&I}{UFC}
+	\item{DTC}{Load on MFD - DTE Page}
 	\condition{Reset Warnings}{
 		\item{F-ACK}{Press to review PFLD}
 		\item{MASTER CAUTION}{Press to acknowledge and reset}
 		\item{FLCS}{Reset if fault shown on PFLD}
 		\item{MFL}{Reset on MFD Test Page}
 	}
-	\item{IFF MASTER}{STBY}
-	\item{C\&I}{UFC}
-	\item{DTC}{Load on MFD - DTE Page}
-	\item{Radios}{Set as Desired, UHF Ch. 2, VHF Ch. 15}
-\end{continuedchecklist}
-
-\begin{checklist}{Avionics \& Checks}
 	\condition{FLCS BIT}{
 		\item{Flight Controls}{Cycle for 20s}
 		\item{FLCS Panel}{Check All Switches Down}
@@ -160,6 +160,7 @@
 		\note{If the BIT fails, repeat the three steps.}
 	}
 	\note{Continue while BIT is running.}
+	\item{Radios}{Set as Desired, UHF Ch. 2, VHF Ch. 15}
 	\condition{Air Refueling Check - If refueling might be necessary}{
 		\item{AIR REFUEL}{Open}
 		\item{Right Indexer}{Check Blue RDY Light Illuminated}
@@ -247,25 +248,25 @@
 	}
 	\item{HMCS}{Align COARSE \& FINE, set Brightness}
 	\item{LANDING / TAXI Light}{TAXI}
-	\item{POSITION}{Flash}
+	\item{POSITION}{Flash except at night in good weather}
 \end{continuedchecklist}
 
 \begin{checklist}{EOR Checks (Optional)}
+	\note{ANTI-COLLISION and TAXI light should be OFF, POSITION light should be STEADY while stationary}
 	\item{Remaining Necessary Configuration \& Arming}{Perform}
 	\note{TGP must be stowed for takeoff.}
 	\item{HMCS}{Align FINE}
 \end{checklist}
 
 \begin{checklist}{Lineup}
-	\item{ANTI COLLISION Light}{1 - 4}
-	\item{LANDING / TAXI Light}{LANDING}
 	\item{Ejection Seat}{Arm}
 	\item{RDR ALT}{On}
 	\item{Lead Plane}{Lineup on Downwind side}
+	\item{LANDING / TAXI Light}{LANDING}
 	\item{NWS}{Disengage}
 	\item{PROBE HEAT}{PROBE HEAT}
 	\item{IFF}{NORM}
-	\item{ECM Power}{On if needed}
+	\item{ECM}{OPR if needed}
 	\item{Cockpit Sweep}{Perform \& Check Critical Systems}
 	\item{Visor}{Lower}
 \end{checklist}
