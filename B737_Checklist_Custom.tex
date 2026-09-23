@@ -5,7 +5,7 @@
 \logo{logo_white/boeing.png}
 \title{Normal Checklist}
 \subtitle{Boeing \\ B737NG}
-\version{Version: 1.0 \\ \today}
+\version{Version: 1.1 \\ \today}
 %\makeatletter
 
 \begin{document}
@@ -175,7 +175,17 @@
 
 \clearpage
 
-\begin{checklist}{Before Taxi -\\No Engine Bleed Takeoff -\\No Wing Anti-Ice}
+\begin{checklist}{No Engine Bleed -\\No Wing Anti-Ice}
+  \note{If Wing Anti-Ice is not required for taxi, replace the normal "Before Taxi" checklist with the following "Before Taxi -
+  No Engine Bleed" checklist}
+\end{checklist}
+
+\begin{checklist}{No Engine Bleed -\\With Wing Anti-Ice}
+  \note{If Wing Anti-Ice is required for taxi, complete the normal "Before Taxi" checklist, leave the APU running, and
+  use the following "Before Taxi - No Engine Bleed" checklist to configure just prior to take-off}
+\end{checklist}
+
+\begin{checklist}{Before Taxi -\\No Engine Bleed}
   \item{Generators}{On}
   \item{APU}{On}
   \item{Start Switches}{Cont}
@@ -195,21 +205,7 @@
   \item{Recall}{Checked}
 \end{checklist}
 
-\begin{checklist}{Before Takeoff -\\No Engine Bleed Takeoff -\\No Wing Anti-Ice}
-  \item{Normal BEFORE TAKEOFF\\Checklist}{Complete}
-\end{checklist}
-
-\begin{checklist}{No Engine Bleed Takeoff -\\With Wing Anti-Ice}
-  \condition{Before Taxi:}{
-    \item{Normal BEFORE TAXI\\Checklist}{Complete}
-  }
-  \condition{Before Takeoff:}{
-    \item{BEFORE TAXI - NO ENGINE BLEED\\Checklist}{Complete}
-    \item{Normal BEFORE TAKEOFF\\Checklist}{Complete}
-  }
-\end{checklist}
-
-\begin{checklist}{After Takeoff -\\No Engine Bleed Takeoff}
+\begin{checklist}{After Takeoff -\\No Engine Bleed}
   \item{Engine \textnumero 2 Bleed}{On}
   \item{APU Bleed}{Off}
   \item{Engine \textnumero 1 Bleed}{On}
