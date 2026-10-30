@@ -5,14 +5,14 @@
 \logo{logo_white/boeing.png}
 \title{Normal Procedures}
 \subtitle{McDonnell Douglas \\ F-15C/D}
-\version{Version: 1.0 \\ \today}
+\version{Version: 1.0.1 \\ \today}
 
 \begin{document}
 
 \begin{checklist}{Before Starting Engine}
 	\item{COCKPIT INTERIOR CHECK}{Perform}
 	\condition{External Lighting} {
-		\item{ANTICOLLISION}{On}
+		\item{ANTI-COLLISION}{On}
 		\item{POSITION}{Steady}
 		\item{TAXI / LDG LIGHT}{Off}
 	}
@@ -33,18 +33,18 @@
 \begin{checklist}{Engine Start}
 	\item{JFS}{Start Both (Right Click)}
 	\item{Ready Light}{Verify On within 10s (15s below 0\degree\ F)}
-	\item{Fire Extinguisher Switch}{Test, Check AMAD FIRE Warning Light\\and Voice Warning}
+	\item{Fire Extinguisher Switch}{Test,\\Check AMAD FIRE Warning Light and Voice Warning}
 	\item{AIR SOURCE}{BOTH}
 	\condition{Right Engine Start} {
 		\item{Right Engine Finger Lift}{Raise and release}
-		\item{Fire Extinguisher Switch}{Test, Check AMAD, LEFT \& RIGHT FIRE Warning Lights\\and Voice Warning}
-		\item{Right Throttle}{Idle above 20\%}
+		\item{Fire Extinguisher Switch}{Test on RPM Increase,\\Check AMAD, LEFT \& RIGHT FIRE Warning Lights and Voice Warning}
+		\item{Right Throttle}{Idle after RPM above 20\%}
 		\item{FTIT}{Monitor, must stay below 900}
 		\item{OIL PRESSURE}{Monitor, must rise to green}
 	}
 	\item{EMER BST ON Light}{Check On}
 	\item{Total Fuel Quantity}{Check}
-	\item{Fire Extinguisher Switch}{Test, Check AMAD, LEFT \& RIGHT FIRE \& BURN THRU Warning Lights\\and Voice Warning}
+	\item{Fire Extinguisher Switch}{Test,\\Check AMAD, LEFT \& RIGHT FIRE \& BURN THRU Warning Lights and Voice Warning}
 \end{checklist}
 
 \begin{continuedchecklist}
@@ -83,16 +83,17 @@
 		\item{ILS / TACAN}{As Desired}
 		\item{VSD \& HUD}{On}
 	}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\condition{TEWS Setup} {
 		\item{ICS}{On}
 		\item{SET-1, -2, -3} {Cycle MAN / AUTO, as desired}
 		\item{RWR \& EWWS}{On}
+		\item{CMD Panel}{Set Up, MODE MAN ONLY}
 		\item{EW Panel}{Set as desired}
 		\item{RWR Filter}{Set up on ARMT Page}
 	}
-\end{checklist}
-
-\begin{continuedchecklist}
 	\item{Radios}{Set as desired (Chnls. 2 \& 15)}
 	\item{Speedbrake}{Toggle \& Check Response and warning light}
 	\item{Flaps}{Down \& Wait for Green}
@@ -114,7 +115,7 @@
 \end{continuedchecklist}
 
 \begin{checklist}{EOR Checks (Optional)}
-	\note{ANTICOLLISION and TAXI light should be OFF, POSITION light should be STEADY while stationary}
+	\note{ANTI-COLLISION and TAXI light should be OFF, POSITION light should be STEADY while stationary}
 	\item{Remaining Necessary Configuration \& Arming}{Perform}
 \end{checklist}
 
@@ -122,11 +123,14 @@
 	\item{EJECTION CONTROLS Safety Lever}{ARMED}
 	\item{Lead Plane}{Lineup on Downwind side}
 	\item{TAXI / LDG LIGHT}{LDG}
+\end{checklist}
+
+\begin{continuedchecklist}
 	\item{POSITION}{Flash}
 	\item{IFF}{All On}
 	\item{Cockpit Sweep}{Perform \& Check Critical Systems}
 	\item{Visor}{Lower}
 	\item{NWS}{Hold Disengage on T/O Roll}
-\end{checklist}
+\end{continuedchecklist}
 
 \end{document}
