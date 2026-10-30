@@ -1,0 +1,130 @@
+\documentclass[sim-use]{checklist}
+\usepackage{gensymb}
+\usepackage{textcomp}
+
+\logo{logo_white/boeing.png}
+\title{Normal Procedures}
+\subtitle{McDonnell Douglas \\ F-15C/D}
+\version{Version: 1.0 \\ \today}
+
+\begin{document}
+
+\begin{checklist}{Before Starting Engine}
+	\item{COCKPIT INTERIOR CHECK}{Perform}
+	\condition{External Lighting} {
+		\item{ANTICOLLISION}{On}
+		\item{POSITION}{Steady}
+		\item{TAXI / LDG LIGHT}{Off}
+	}
+	\item{Throttles \& Radar}{Check Off}
+	\item{SLIPWAY}{Close}
+	\item{CAS}{On}
+	\item{OXYGEN}{Supply On}
+	\condition{ENGINE Control Panel} {
+		\item{GEN Switches}{On}
+		\item{EMERG GEN}{Auto}
+		\item{EEC / ENG CONTR Switches}{On}
+		\item{JFS STARTER}{On}
+		\item{L / R ENGINE MASTER}{On \& Guarded}
+	}
+	\item{INTERIOR LT Panel}{Set as desired}
+\end{checklist}
+
+\begin{checklist}{Engine Start}
+	\item{JFS}{Start Both (Right Click)}
+	\item{Ready Light}{Verify On within 10s (15s below 0\degree\ F)}
+	\item{Fire Extinguisher Switch}{Test, Check AMAD FIRE Warning Light\\and Voice Warning}
+	\item{AIR SOURCE}{BOTH}
+	\condition{Right Engine Start} {
+		\item{Right Engine Finger Lift}{Raise and release}
+		\item{Fire Extinguisher Switch}{Test, Check AMAD, LEFT \& RIGHT FIRE Warning Lights\\and Voice Warning}
+		\item{Right Throttle}{Idle at 25\%}
+		\item{FTIT}{Monitor, must stay below 900}
+		\item{OIL PRESSURE}{Monitor, must rise to green}
+	}
+	\item{EMER BST ON Light}{Check On}
+	\item{Total Fuel Quantity}{Check}
+	\item{Fire Extinguisher Switch}{Test, Check AMAD, LEFT \& RIGHT FIRE \& BURN THRU Warning Lights\\and Voice Warning}
+\end{checklist}
+
+\begin{continuedchecklist}
+	\condition{Left Engine Start} {
+		\item{Left Engine Finger Lift}{Raise and release}
+		\item{Left Throttle}{Idle at 25\%}
+		\item{FTIT}{Monitor, must stay below 900}
+		\item{OIL PRESSURE}{Monitor, must rise to green}
+	}
+	\item{JFS}{Confirm Off}
+	\item{Ramps}{Confirm Down}
+\end{continuedchecklist}
+
+\begin{checklist}{After Engine Start}
+	\item{Canopy}{Close}
+	\condition{INS Alignment} {
+		\item{NCI DATA Knob} {PP}
+		\item{NCI MODE Knob} {GC}
+		\item{NCI Numpad RDY Button}{Press \& Verify Numpad On}
+		\item{NCI Numpad Enter Button}{Press}
+			\note{Coarse alignment is reached after 60s (solid ALN light).\\
+			Partial alignment is reached after 120s (1Hz flashing ALN light).\\
+			Full alignment is reached after 240s (4Hz flashing ALN light).}
+	}
+	\item{JTIDS}{Norm}
+	\item{MPCD}{On \&\\Wait for TERMINAL LOAD: INITIALIZE}
+	\item{CLEAR CC BUF}{Press}
+	\item{DTM}{Read}
+	\condition{Avionics Setup} {
+		\item{JTIDS}{Set Up if needed}
+		\item{AAI}{Auto}
+		\item{IFF}{Set as desired, NORM \& Off / Out}
+		\item{RADAR}{STANDBY}
+		\item{ILS / TACAN}{As Desired}
+		\item{VSD \& HUD}{On}
+	}
+	\condition{TEWS Setup} {
+		\item{ICS}{On}
+		\item{SET-1, -2, -3} {Cycle MAN / AUTO, as desired}
+		\item{RWR \& EWWS}{On}
+		\item{EW Panel}{Set as desired}
+		\item{RWR Filter}{Set up on ARMT Page}
+	}
+	\item{Radios}{Set as desired (Chnls. 2 \& 15)}
+\end{checklist}
+
+\begin{continuedchecklist}
+	\item{Speedbrake}{Toggle \& Check}
+	\item{Flaps}{Down \& Check Green}
+	\item{Slipway Door}{Check}
+	\item{Trim}{Set T/O}
+	\item{Flight Controls}{Check}
+	\item{EEC / ENG CONTR Switches}{Cycle in sequence, check nozzle closing and warning lights}
+	\item{JFS LOW Light}{Check Off}
+	\item{Oxygen}{Check Quantity, Supply On}
+	\item{Fuel Quantity}{Check}
+	\condition{To finish INS alignment} {
+		\item{INS MODE Knob}{NAV INS}
+		\item{NCI Numpad Enter Button}{Press}
+		\item{NCI Numpad RDY Button}{Press \& Verify Numpad Off}
+	}
+	\item{Altimeter}{Set for Takeoff}
+	\item{LANDING / TAXI Light}{TAXI}
+	\item{POSITION}{Flash except at night in good weather}
+\end{continuedchecklist}
+
+\begin{checklist}{EOR Checks (Optional)}
+	\note{ANTICOLLISION and TAXI light should be OFF, POSITION light should be STEADY while stationary}
+	\item{Remaining Necessary Configuration \& Arming}{Perform}
+\end{checklist}
+
+\begin{checklist}{Lineup}
+	\item{EJECTION CONTROLS Safety Lever}{Arm}
+	\item{Lead Plane}{Lineup on Downwind side}
+	\item{TAXI / LDG LIGHT}{LDG}
+	\item{POSITION}{Flash}
+	\item{NWS}{Disengage}
+	\item{IFF}{All On}
+	\item{Cockpit Sweep}{Perform \& Check Critical Systems}
+	\item{Visor}{Lower}
+\end{checklist}
+
+\end{document}
