@@ -38,7 +38,7 @@
 	\condition{Right Engine Start} {
 		\item{Right Engine Finger Lift}{Raise and release}
 		\item{Fire Extinguisher Switch}{Test, Check AMAD, LEFT \& RIGHT FIRE Warning Lights\\and Voice Warning}
-		\item{Right Throttle}{Idle at 25\%}
+		\item{Right Throttle}{Idle above 20\%}
 		\item{FTIT}{Monitor, must stay below 900}
 		\item{OIL PRESSURE}{Monitor, must rise to green}
 	}
@@ -70,11 +70,13 @@
 			Full alignment is reached after 240s (4Hz flashing ALN light).}
 	}
 	\item{JTIDS}{Norm}
-	\item{MPCD}{On \&\\Wait for TERMINAL LOAD: INITIALIZE}
-	\item{CLEAR CC BUF}{Press}
-	\item{DTM}{Read}
+	\item{MPCD}{On, select Menu \&\\Wait for TERMINAL LOAD: INITIALIZE}
+	\condition{On DTM Page} {
+		\item{CC BUF CLEAR}{Press}
+		\item{READ}{Initialize}
+	}
 	\condition{Avionics Setup} {
-		\item{JTIDS}{Set Up if needed}
+		\item{JTIDS}{Set Up as needed}
 		\item{AAI}{Auto}
 		\item{IFF}{Set as desired, NORM \& Off / Out}
 		\item{RADAR}{STANDBY}
@@ -88,12 +90,12 @@
 		\item{EW Panel}{Set as desired}
 		\item{RWR Filter}{Set up on ARMT Page}
 	}
-	\item{Radios}{Set as desired (Chnls. 2 \& 15)}
 \end{checklist}
 
 \begin{continuedchecklist}
-	\item{Speedbrake}{Toggle \& Check}
-	\item{Flaps}{Down \& Check Green}
+	\item{Radios}{Set as desired (Chnls. 2 \& 15)}
+	\item{Speedbrake}{Toggle \& Check Response and warning light}
+	\item{Flaps}{Down \& Wait for Green}
 	\item{Slipway Door}{Check}
 	\item{Trim}{Set T/O}
 	\item{Flight Controls}{Check}
@@ -117,14 +119,14 @@
 \end{checklist}
 
 \begin{checklist}{Lineup}
-	\item{EJECTION CONTROLS Safety Lever}{Arm}
+	\item{EJECTION CONTROLS Safety Lever}{ARMED}
 	\item{Lead Plane}{Lineup on Downwind side}
 	\item{TAXI / LDG LIGHT}{LDG}
 	\item{POSITION}{Flash}
-	\item{NWS}{Disengage}
 	\item{IFF}{All On}
 	\item{Cockpit Sweep}{Perform \& Check Critical Systems}
 	\item{Visor}{Lower}
+	\item{NWS}{Hold Disengage on T/O Roll}
 \end{checklist}
 
 \end{document}
